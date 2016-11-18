@@ -9,16 +9,7 @@ import ContractVehicles from './ContractVehicles';
 import QualityAssurance from './QualityAssurance';
 import ContactUs from './ContactUs';
 
-import makeStore from './store.js';
-import { Provider } from 'react-redux';
-import { initalActive } from './action_creators';
-
-export const store = makeStore();
-
-store.dispatch(initalActive(""));
-
 ReactDOM.render(
-	<Provider store={store}>
 		<Router history={browserHistory}>
 			<Route component={App}>
 				<Route path="/" component={Home} />
@@ -28,7 +19,6 @@ ReactDOM.render(
 				<Route path="QualityAssurance" component={QualityAssurance} />
 				<Route path="ContactUs" component={ContactUs} />
 			</Route>
-		</Router>
-	</Provider>,
+		</Router>,
   document.getElementById('root')
 );
