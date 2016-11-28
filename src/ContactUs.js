@@ -8,10 +8,12 @@ class ContactUs extends Component {
 				<h1>Contact Us</h1>
 			
 				<h2>Location</h2>
-				<p>Spectrum Technology Group, Inc.</p>
-				<p>12 South Summit Avenue</p>
-				<p>Suite 210</p>
-				<p>Gaithersburg, MD 20877</p>
+				<address>
+					Spectrum Technology Group, Inc.<br />
+					12 South Summit Avenue<br />
+					Suite 210<br />
+					Gaithersburg, MD 20877
+				</address>
 			
 				<h2>Phone</h2>
 				<p>(301) 947-4622</p>

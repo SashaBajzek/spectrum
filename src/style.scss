@@ -1,13 +1,18 @@
+$black: #0e1112;
+$copyright: #666;
+$footerGrey: #8b939b;
 $blackgrey: #181c1f;
 $mediumgrey: #8b939b;
 $headerGrey: #3a3a3a;
+$addressGrey: #ccc;
 $lightgrey: #e0e0e0;
 $white: #fff;
-$gold: #CCAC55;;
+$gold: #CCAC55;
+$blue: #3569a4;
 
 * {
 	box-sizing: border-box;
-	font-family: 'Muli', sans-serif;
+	font-family: 'Muli', 'Helvetica', sans-serif;
 }
 
 body {
@@ -107,6 +112,22 @@ header {
 				color: $gold;
 			}
 			
+			a.active--contractVehicles {
+				position: relative;
+			}
+			
+			a.active--contractVehicles:after {
+				content: "";
+				display: block;
+				border-left: 6px solid transparent;
+				border-right: 6px solid transparent;
+				border-bottom: 6px solid #fff;
+				position: absolute;
+				left: 50%;
+				height: 0;
+				top: 55px;
+				width: 0;
+			}
 
 			a:hover span {
 				border-bottom: solid $gold 2px;
@@ -151,22 +172,211 @@ a {
 }
 
 
-.footer h1 {
-	margin: 0;
+footer {
+	display: flex;
+	flex-grow: 1;
+	font-family: 'Muli', sans-serif;
+	font-size: 12px;
+	height: 170px;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-top: 40px;
+	width: 1080px;
+	
+	h3 {
+		color: $white;
+		font-size: 11px;
+		font-weight: bold;
+		line-height: 0.8;
+		margin: 0;
+		padding-bottom: 10px;
+	}
+	
+	ul {
+		color: $white;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	span {
+		flex-shrink: 0;
+	}
+
+	li {
+		text-align: center;
+	}
+
+	address {
+		text-transform: uppercase;
+	}
+
+	a span {
+		border-bottom: solid transparent 1px;
+	}
+	
+	a {
+		align-items: center;
+		color: $footerGrey;
+		display: flex;
+		line-height: 16px;
+		padding: 0 0 6px 0;
+		text-transform: uppercase;
+	}
+
+	a:hover {
+		padding-bottom: 6px;
+	}
+
+	a.active {
+		color: $gold;
+	}
+
+	a:hover span {
+		border-bottom: solid $mediumgrey 1px;
+		transition: border-bottom .2s ease;
+	}
+	
+	div {
+		border-right: dashed $headerGrey 1px;
+		height: 100px;
+		padding-left: 25px;
+		text-transform: uppercase;
+		width: 270px;
+	}
+	
+	div:last-of-type {
+		border-right: none;
+	}
+
+	h1 {
+		background-image: url(../public/STG_Logo_Clear-white+grey.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+		flex-shrink: 0;
+		height: 26px;
+		margin: auto 20px auto 0;
+
+		overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+
+		width: 160px;
+		
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	
+	address {
+		color: $addressGrey;
+		font-size: 12px;
+		line-height: 18px;
+		margin-top: 4px;
+	}
+	
 }
+
+.copyright {
+	align-items: center;
+	background-color: $black;
+	color: #666;
+	display: flex;
+	font-size: 12px;
+	height: 50px;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.copyright p {
+	text-align: center;
+	width: 1080px;
+}	
 
 
 main {
 	background-color: $white;
-	margin: 25px auto;
-	width: 1080px;
 	
 	h1 {
 		margin: 0;
 	}
 }
 
+.navGroup--contractVehicles {
+	background: linear-gradient(to bottom,#f2f2f2,rgba(242,242,242,0.8));
+	
+	nav {
+		font-family: 'Muli', sans-serif;
+		font-size: 12px;
+		margin: 0 auto;
+		width: 1080px;
+		
+		ul {
+			display: flex;
+			height: 50px;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
 
+		li {
+			flex-grow: 1;
+			text-align: center;
+		}
+		
+		a {
+			border-bottom: solid 2px transparent;
+			color: $copyright;
+			display: block;
+			font-size: 12px;
+			height: 100%;
+			padding: 18px 0;
+			position: relative;
+			width: 100%;
+		}
+
+		a:hover {
+			border-bottom: solid 2px $blue;
+			transition: border-bottom .2s ease;
+		}
+
+		a.active {
+			background: $white;
+			border-bottom: solid 2px $blue;
+		}
+		
+		a::before {
+			border-left: 1px dashed #999;
+    	border-left-color: rgba(153,153,153,0.8);
+			content: "";
+			height: 35px;
+			left: 0;
+			position: absolute;
+			top: 7.5px;
+		}
+		
+		li:last-child a::after {
+			border-right: 1px dashed #999;
+    	border-right-color: rgba(153,153,153,0.8);
+			content: "";
+			height: 35px;
+			position: absolute;
+			right: 0;
+			top: 7.5px;
+		}
+		
+	
+		
+	}
+	
+	
+	
+	
+}
 
 
 .home {

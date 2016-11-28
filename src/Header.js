@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import NavTab from './NavTab';
 
 class Header extends Component {
-	
+
   render() {
     return (
 			<div className="container--dark">
@@ -12,9 +12,11 @@ class Header extends Component {
 					<h1><Link to="/">STG, INC.</Link></h1>
 					<nav>
 					 <ul className="navGroup--main">
-						<NavTab navLink="/AboutUs" content="About Spectrum" />
+						<NavTab navLink="/AboutUs" content="ABOUT SPECTRUM" />
 						<NavTab navLink="/Capabilities" content="CAPABILITIES" />
-						<NavTab navLink="/ContractVehicles" content="CONTRACT VEHICLE" />
+						<li>
+							<Link to="/ContractVehicles" activeClassName="active active--contractVehicles"><span>CONTRACT VEHICLES</span></Link>
+						</li>
 						<NavTab navLink="/QualityAssurance" content="QUALITY ASSURANCE" />
 					 </ul>
 					 <ul className="navGroup--contact">
