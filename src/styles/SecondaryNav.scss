@@ -1,0 +1,84 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.secondaryNav__root {
+	background: linear-gradient(to bottom,#f2f2f2,rgba(242,242,242,0.8));
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+	margin-bottom: 15px;
+	
+}
+
+
+.secondaryNav__nav {
+	font-family: 'Muli', sans-serif;
+	font-size: 12px;
+	margin: 0 auto;
+	max-width: $screen-sm-min - 100px;
+
+	.secondaryNav__navGroup--main {
+		display: flex;
+		height: 50px;
+		justify-content: space-between;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navItem {
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.navItem__link {
+		border-bottom: solid 2px transparent;
+		color: $nav__secondary--textGrey;
+		display: block;
+		font-size: 12px;
+		height: 100%;
+		padding: 18px 0;
+		position: relative;
+		width: 100%;
+	}
+
+	.navItem__link:hover {
+		border-bottom: solid 2px $nav__secondary--activeBlue;
+		transition: border-bottom .2s ease;
+	}
+
+	.navItem__link.navItem--active {
+		background: $white;
+		border-bottom: solid 2px $nav__secondary--activeBlue;
+	}
+
+	.navItem__link::before {
+		border-left: 1px dashed #999;
+		border-left-color: rgba(153,153,153,0.8);
+		content: "";
+		height: 35px;
+		left: 0;
+		position: absolute;
+		top: 7.5px;
+	}
+
+	.navItem:last-child .navItem__link::after {
+		border-right: 1px dashed #999;
+		border-right-color: rgba(153,153,153,0.8);
+		content: "";
+		height: 35px;
+		position: absolute;
+		right: 0;
+		top: 7.5px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.secondaryNav__nav {
+		max-width: $screen-md-min - 50px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.secondaryNav__nav {
+		max-width: $screen-md-min;
+	}
+}

@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.contactUs__main {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contactUs__googleMap {
+	margin-right: 200px;
+}

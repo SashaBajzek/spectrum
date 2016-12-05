@@ -1,0 +1,62 @@
+/*
+ * Colors
+ * ========================================================================== */
+
+$black: #0e1112;
+$blue: #3569a4;
+$gold: #CCAC55;
+$white: #fff;
+
+$blackgrey: #181c1f;
+$lightgrey: #e0e0e0;
+$mediumgrey: #8b939b;
+$mediumdarkgrey: #3a3a3a;
+$textgrey: #666;
+
+/* Header Colors */
+$header__background--blackGrey: $blackgrey;
+$header__background--black: $black;
+$header__nav--activeGold: $gold;
+$header__nav--textGrey: $mediumgrey;
+$header__nav--textWhite: $white;
+
+/* Secondary Nav Colors */
+$nav__secondary--activeBlue: $blue;
+$nav__secondary--textGrey: $textgrey;
+
+/* Main Colors */
+$main__background--grey: $lightgrey;
+$main__background--blackgrey: $blackgrey;
+$main__boxShadow--grey: $mediumgrey;
+$main--textDarkGrey: $mediumdarkgrey;
+
+/* Footer Colors */
+$footer__background--blackGrey: $blackgrey;
+$footer__border--grey: $mediumdarkgrey;
+$footer__nav--activeGold: $gold;
+$footer__nav--textGrey: $mediumgrey;
+$footer__address--textGrey: #ccc;
+$footer__copyright--backgroundBlack: $black;
+$footer__copyright--textGrey: $textgrey;
+
+
+/*
+ * Media queries breakpoints
+ * ========================================================================== */
+
+$screen-xs-min: 480px;  /* Extra small screen / phone */
+$screen-sm-min: 768px;  /* Small screen / tablet */
+$screen-md-min: 992px;  /* Medium screen / desktop */
+$screen-lg-min: 1200px; /* Large screen / wide desktop */
+
+
+
+/*
+ * Variables Etc.
+ * ========================================================================== */
+
+/* Height Variables */
+$footerHeight: 170px;
+$copyrightHeight: 50px;
+$footerHeightTotal: $footerHeight + $copyrightHeight;
+

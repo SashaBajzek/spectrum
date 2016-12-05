@@ -1,0 +1,59 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.home__root {
+	margin-top: 0;
+}
+
+.home__heroImg {
+	background-image: url(../../public/./VirginiaClassApproaching.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 400px;
+}
+
+.home__heroText {
+	align-items: center;
+	background-color: $main__background--blackgrey;
+	color: $white;
+	display: flex;
+	font-family: 'Muli', sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	height: 100px;
+	margin: 0 auto;
+	max-width: $screen-sm-min - 100px;
+	text-align: center;
+}
+
+
+.home {
+	.main__container--lightgrey {
+		margin: 25px auto;
+		max-width: $screen-sm-min - 200px;
+	}
+
+	p {
+		margin: 20px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.home__heroText {
+		max-width: $screen-md-min - 50px;
+	}
+	
+	.home .main__container--lightgrey {
+		max-width: $screen-md-min - 200px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.home__heroText {
+		max-width: $screen-md-min;
+	}
+	
+	.home .main__container--lightgrey {
+		max-width: $screen-md-min - 200px;
+	}
+}

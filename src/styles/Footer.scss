@@ -1,0 +1,141 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.footer__container--dark {
+	background-color: $footer__background--blackGrey;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.footer__root {
+	background-color: $footer__background--blackGrey;
+	display: flex;
+	flex-grow: 1;
+	font-family: 'Muli', sans-serif;
+	font-size: 12px;
+	height: $footerHeight;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: $screen-sm-min - 100px;
+	padding-top: 40px;
+	text-transform: uppercase;
+}
+
+.footer__list {
+	margin: 0;
+	padding: 0;
+	
+	.navItem {
+		text-align: center;
+	}
+	
+	.navItem__link {
+		align-items: center;
+		color: $footer__nav--textGrey;
+		display: flex;
+		line-height: 16px;
+		padding: 0 0 6px 0;
+		text-transform: uppercase;
+	}
+
+	.navItem--active {
+		color: $footer__nav--activeGold;
+	}
+
+	.navItem__underline {
+		border-bottom: solid transparent 1px;
+		flex-shrink: 0;
+	}
+	
+	.navItem__link:hover {
+		padding-bottom: 6px;
+		
+		.navItem__underline {
+			border-bottom: solid $footer__nav--textGrey 1px;
+			transition: border-bottom .2s ease;
+		}
+	}
+
+}
+
+
+.footer__column {
+	border-right: dashed $footer__border--grey 1px;
+	height: 100px;
+	padding-left: 25px;
+	text-transform: uppercase;
+	width: 270px;
+}
+
+.footer__column:last-of-type {
+	border-right: none;
+}
+
+.column__header {
+	color: $white;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 0.8;
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+.footer__logo {
+	@include image-replace;
+	background-image: url(../../public/STG_Logo_Clear-white+grey.svg);
+	flex-shrink: 0;
+	height: 26px;
+	margin: auto 20px auto 0;
+	width: 160px;
+
+	.navItem__link {
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.footer__address {
+	color: $footer__address--textGrey;
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: 4px;
+}
+
+.footer__copyright {
+	align-items: center;
+	background-color: $footer__copyright--backgroundBlack;
+	color: $footer__copyright--textGrey;
+	display: flex;
+	font-size: 12px;
+	height: $copyrightHeight;
+	justify-content: center;
+	text-transform: uppercase;
+
+	p {
+		max-width: $screen-sm-min - 100px;
+		text-align: center;
+	}	
+}
+
+@media (min-width: $screen-md-min) {
+	.footer__root {
+		max-width: $screen-md-min - 50px;
+	}
+	
+	.footer__copyright p {
+		max-width: $screen-md-min - 50px;
+	}
+
+}
+
+@media (min-width: $screen-lg-min) {
+	.footer__root {
+		max-width: $screen-md-min;
+	}
+	
+	.footer__copyright p {
+		max-width: $screen-md-min;
+	}
+}

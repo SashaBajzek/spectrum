@@ -1,0 +1,38 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+
+.googleMap {
+	height: 300px;
+	width: 300px;
+}
+
+.mapMarker {
+	position: relative;
+	
+	&::before, &::after {
+		content: '';
+		position: absolute;
+	}
+	
+  &::before {
+    background: $blue;
+		border-radius: 10px;
+		height: 20px;
+		left: -10px;
+		top: -20px;
+    width: 20px;
+		z-index: 1;
+  }
+	
+	&::after {
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 20px solid $blue;
+		height: 0;
+		left: -10px;
+		top: -10px;
+		width: 0;
+  }
+
+}

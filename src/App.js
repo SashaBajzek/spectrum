@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './styles/style.scss';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
 			<div>
 				<Header />
-				{this.props.children}
+					{this.props.children}
 				<Footer />
 			</div>
     );

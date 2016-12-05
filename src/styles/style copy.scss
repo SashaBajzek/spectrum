@@ -1,18 +1,85 @@
-$black: #0e1112;
-$copyright: #666;
-$footerGrey: #8b939b;
-$blackgrey: #181c1f;
-$mediumgrey: #8b939b;
-$headerGrey: #3a3a3a;
-$addressGrey: #ccc;
-$lightgrey: #e0e0e0;
-$white: #fff;
-$gold: #CCAC55;
+/*
+ * Colors
+ * ========================================================================== */
+
 $blue: #3569a4;
+$gold: #CCAC55;
+$white: #fff;
+
+$blackgrey: #181c1f;
+$lightgrey: #e0e0e0;
+$mediumgrey: #8b939b;
+$mediumdarkgrey: #3a3a3a;
+$textgrey: #666;
+
+/* Header Colors */
+$header__background--blackGrey: $blackgrey; /*not used yet*/
+$header__nav--activeGold: $gold;
+$header__nav--textGrey: $mediumgrey;
+$header__nav--textWhite: $white;
+
+/* Secondary Nav Colors */
+$nav__secondary--activeBlue: $blue;
+$nav__secondary--textGrey: $textgrey;
+
+/* Main Colors */
+$main__background--grey: $lightgrey;
+$main__boxShadow--grey: $mediumgrey;
+$main--textDarkGrey: $mediumdarkgrey;
+
+/* Footer Colors */
+$footer__background--blackGrey: $blackgrey; /*not used yet*/
+$footer__border--grey: $mediumdarkgrey;
+$footer__nav--activeGold: $gold;
+$footer__nav--textGrey: $mediumgrey;
+$footer__address--textGrey: #ccc;
+$footer__copyright--backgroundBlack: #0e1112;
+$footer__copyright--textGrey: $textgrey;
+
+
+/*
+ * Media queries breakpoints
+ * ========================================================================== */
+
+$screen-xs-min: 480px;  /* Extra small screen / phone */
+$screen-sm-min: 768px;  /* Small screen / tablet */
+$screen-md-min: 992px;  /* Medium screen / desktop */
+$screen-lg-min: 1200px; /* Large screen / wide desktop */
+
+
+
+/*
+ * Variables Etc.
+ * ========================================================================== */
+
+/* Height Variables */
+$footerHeight: 170px;
+$copyrightHeight: 50px;
+$footerHeightTotal: $footerHeight + $copyrightHeight;
+
+
+/*
+ * Mixins
+ * ========================================================================== */
+
+@mixin image-replace {
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+
 
 * {
 	box-sizing: border-box;
 	font-family: 'Muli', 'Helvetica', sans-serif;
+}
+
+html {
+	min-height: 100%;
+	position: relative;
 }
 
 body {
@@ -21,8 +88,20 @@ body {
 	margin: 0 auto;
 }
 
+.container--main {
+	margin: 0 auto;
+	width: 1080px;
+}
+
 .container--dark {
 	background-color: $blackgrey;
+}
+
+.footer__container--dark {
+	background-color: $blackgrey;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 header, .footer {
@@ -38,20 +117,14 @@ header {
 	margin: 0 auto;
 	width: 1080px;
 	
-
-	
 	h1 {
 		background-image: url(../public/STG_Logo_Clear-white+grey.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
 		
 		flex-shrink: 0;
 		height: 37px;
 		margin: auto 20px auto 0;
 
-		overflow: hidden;
-		text-indent: 100%;
-		white-space: nowrap;
+		@include image-replace;
 
 		width: 160px;
 		
@@ -109,7 +182,7 @@ header {
 			}
 			
 			a.active {
-				color: $gold;
+				color: $header__nav--activeGold;
 			}
 			
 			a.active--contractVehicles {
@@ -130,7 +203,7 @@ header {
 			}
 
 			a:hover span {
-				border-bottom: solid $gold 2px;
+				border-bottom: solid $header__nav--activeGold 2px;
 				transition: border-bottom .2s ease;
 			}
 			
@@ -139,7 +212,7 @@ header {
 		.navGroup--contact {
 
 			a {
-				color: $mediumgrey;
+				color: $header__nav--textGrey;
 				font-size: 12px;
 				padding: 15px 8px;
 			}
@@ -149,11 +222,11 @@ header {
 			}
 			
 			a.active {
-				color: $gold;
+				color: $header__nav--activeGold;
 			}
 			
 			a:hover span {
-				border-bottom: solid $mediumgrey 2px;
+				border-bottom: solid $header__nav--textGrey 2px;
 				transition: border-bottom .2s ease;
 			}
 
@@ -177,7 +250,7 @@ footer {
 	flex-grow: 1;
 	font-family: 'Muli', sans-serif;
 	font-size: 12px;
-	height: 170px;
+	height: $footerHeight;
 	justify-content: space-between;
 	margin: 0 auto;
 	padding-top: 40px;
@@ -193,7 +266,6 @@ footer {
 	}
 	
 	ul {
-		color: $white;
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -217,7 +289,7 @@ footer {
 	
 	a {
 		align-items: center;
-		color: $footerGrey;
+		color: $footer__nav--textGrey;
 		display: flex;
 		line-height: 16px;
 		padding: 0 0 6px 0;
@@ -229,16 +301,16 @@ footer {
 	}
 
 	a.active {
-		color: $gold;
+		color: $footer__nav--activeGold;
 	}
 
 	a:hover span {
-		border-bottom: solid $mediumgrey 1px;
+		border-bottom: solid $footer__nav--textGrey 1px;
 		transition: border-bottom .2s ease;
 	}
 	
 	div {
-		border-right: dashed $headerGrey 1px;
+		border-right: dashed $footer__border--grey 1px;
 		height: 100px;
 		padding-left: 25px;
 		text-transform: uppercase;
@@ -251,16 +323,13 @@ footer {
 
 	h1 {
 		background-image: url(../public/STG_Logo_Clear-white+grey.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
+		
 		
 		flex-shrink: 0;
 		height: 26px;
 		margin: auto 20px auto 0;
 
-		overflow: hidden;
-		text-indent: 100%;
-		white-space: nowrap;
+		@include image-replace;
 
 		width: 160px;
 		
@@ -272,7 +341,7 @@ footer {
 	}
 	
 	address {
-		color: $addressGrey;
+		color: $footer__address--textGrey;
 		font-size: 12px;
 		line-height: 18px;
 		margin-top: 4px;
@@ -282,11 +351,11 @@ footer {
 
 .copyright {
 	align-items: center;
-	background-color: $black;
-	color: #666;
+	background-color: $footer__copyright--backgroundBlack;
+	color: $footer__copyright--textGrey;
 	display: flex;
 	font-size: 12px;
-	height: 50px;
+	height: $copyrightHeight;
 	justify-content: center;
 	text-transform: uppercase;
 }
@@ -299,6 +368,8 @@ footer {
 
 main {
 	background-color: $white;
+	margin-bottom: $footerHeightTotal + 25px;
+	margin-top: 25px;
 	
 	h1 {
 		margin: 0;
@@ -307,6 +378,8 @@ main {
 
 .navGroup--contractVehicles {
 	background: linear-gradient(to bottom,#f2f2f2,rgba(242,242,242,0.8));
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+	margin-bottom: 15px;
 	
 	nav {
 		font-family: 'Muli', sans-serif;
@@ -330,7 +403,7 @@ main {
 		
 		a {
 			border-bottom: solid 2px transparent;
-			color: $copyright;
+			color: $nav__secondary--textGrey;
 			display: block;
 			font-size: 12px;
 			height: 100%;
@@ -340,13 +413,13 @@ main {
 		}
 
 		a:hover {
-			border-bottom: solid 2px $blue;
+			border-bottom: solid 2px $nav__secondary--activeBlue;
 			transition: border-bottom .2s ease;
 		}
 
 		a.active {
 			background: $white;
-			border-bottom: solid 2px $blue;
+			border-bottom: solid 2px $nav__secondary--activeBlue;
 		}
 		
 		a::before {
@@ -368,18 +441,60 @@ main {
 			right: 0;
 			top: 7.5px;
 		}
-		
-	
-		
 	}
+}
+
+.navGroup--teamMembers {
 	
-	
-	
-	
+	nav {
+		font-family: 'Muli', sans-serif;
+		font-size: 12px;
+		margin: 25px auto;
+		width: 1080px;
+		
+		ul {
+			display: flex;
+			height: 34px;
+			justify-content: space-between;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			text-align: center;
+		}
+		
+		a {
+			background: linear-gradient(to bottom,#f2f2f2,rgba(242,242,242,0.8));
+			box-shadow: 0 0 5px 0 rgba(0,0,0,0.25);
+			color: $nav__secondary--textGrey;
+			display: block;
+			font-size: 12px;
+			height: 100%;
+			padding: 10px 25px;
+			position: relative;
+			width: 100%;
+		}
+
+		a:hover {
+			background: rgba(242,242,242,0.25);
+			text-decoration: underline;
+		}
+
+		a.active {
+			background: rgba(242,242,242,0.25);
+			color: $nav__secondary--activeBlue;
+			font-weight: bold;
+		}
+	}
 }
 
 
 .home {
+	
+	margin-top: 0;
+	
 	.hero {
 		background-image: url(../public/./VirginiaClassApproaching.jpg);
 		background-repeat: no-repeat;
@@ -402,8 +517,8 @@ main {
 	}
 	
 	.container {
-		background-color: $lightgrey;
-		box-shadow: 0 2px 10px $mediumgrey;
+		background-color: $main__background--grey;
+		box-shadow: 0 2px 10px $main__boxShadow--grey;
 		margin: 25px 200px;
 		padding: 25px;
 	}
@@ -419,7 +534,7 @@ main {
 .quality {
 	
 	h2 {
-		color: $headerGrey;
+		color: $main--textDarkGrey;
 		font-size: 25px;
 		line-height: 1.2em;
 	}
@@ -434,7 +549,7 @@ main {
 	}
 	
 	li:nth-child(odd) {
-		background-color: $lightgrey;
+		background-color: $main__background--grey;
 	}
 	
 	p {
@@ -442,4 +557,51 @@ main {
     font-weight: normal;
     line-height: 24px;
 	}
+}
+
+.teamMember {
+	background-color: rgba(242,242,242,0.8);
+	padding: 15px;
+	
+	h2 {
+		margin-top: 0;
+	}
+}
+
+
+.googleMap {
+	height: 200px;
+	width: 200px;
+}
+
+.mapMarker {
+	position: relative;
+	
+	&::before, &::after {
+		content: '';
+		position: absolute;
+	}
+	
+  &::before {
+    background: $blue;
+		border-radius: 10px;
+		height: 20px;
+		left: -10px;
+		top: -20px;
+    width: 20px;
+		z-index: 1;
+  }
+	
+	&::after {
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 20px solid $blue;
+		height: 0;
+		left: -10px;
+		top: -10px;
+		width: 0;
+  }
+
+
+	
 }

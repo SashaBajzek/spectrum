@@ -1,0 +1,29 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.quality {
+	
+	h2 {
+		color: $main--textDarkGrey;
+		font-size: 25px;
+		line-height: 1.2em;
+	}
+	
+	ul {
+		padding: 0;
+	}
+	
+	li {
+		margin: 0;
+	}
+	
+	li:nth-child(odd) {
+		background-color: $main__background--grey;
+	}
+	
+	p {
+		font-family: Arial, sans-serif;
+    font-weight: normal;
+    line-height: 24px;
+	}
+}

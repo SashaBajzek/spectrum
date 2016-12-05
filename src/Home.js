@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './styles/Home.scss';
 
 class Home extends Component {
   render() {
     return (
-			<main className="home">
-				<div className="hero"></div>
-				<div className="container--dark"><h1>SPECTRUM TECHNOLOGY GROUP, INC.</h1></div>
-				<div className="container">
+			<main className="home home__root">
+				<div className="home__heroImg"></div>
+				<div className="main__container--blackgrey"><h1 className="home__heroText">SPECTRUM TECHNOLOGY GROUP, INC.</h1></div>
+				<div className="main__container--lightgrey">
 					<p>
 						Spectrum Technology is a young, dynamic company dedicated to providing the government and industry with high-quality services in the areas of applied research, network development and implementation, acoustical engineering, signatures measurement and analysis for naval vessels, web and database programming, and technology management. The support and development Spectrum Technology delivers is becoming more and more viable and important as Net-Centric warfare becomes more predominant.
 					</p>

@@ -1,0 +1,11 @@
+/*
+ * Mixins
+ * ========================================================================== */
+
+@mixin image-replace {
+	background-repeat: no-repeat;
+	background-size: contain;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}
