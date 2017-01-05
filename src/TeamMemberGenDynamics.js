@@ -5,16 +5,16 @@ class TeamMemberGenDynamics extends Component {
   render() {
     return (	
 			<div className="teamMember teamMember--GenDynamics">
-				<div className="googleMap teamMember__googleMap">
-							<SimpleMap lat={38.873572} lng={-77.312699} />
-				</div>
 				<div className="teamMember__main">
-					<h2>General Dynamics Information Technology</h2>
+					<h2>GENERAL DYNAMICS INFORMATION TECHNOLOGY</h2>
+					<div className="googleMap teamMember__googleMap">
+						<SimpleMap lat={38.873572} lng={-77.312699} />
+					</div>
 					<h3>Address</h3>
-					<address>
+					<div className="teamMember__address">
 						3211 Jermantown Road<br />
 						Fairfax, VA 22030
-					</address>
+					</div>
 					<h3>Existing SeaPort-e Prime?</h3>
 					<p>Yes</p>
 					<h3>CAGE Code</h3>

@@ -98,6 +98,10 @@ module.exports = {
       }
     ],
     loaders: [
+			{
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      },
       // Process JS with Babel.
       {
         test: /\.(js|jsx)$/,

@@ -1,15 +1,16 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.home__root {
-	margin-top: 0;
+.home {
+	margin-top: $headerHeight--mobile;
+	padding-bottom: $footerHeightTotal--mobile + 25px;
 }
 
 .home__heroImg {
 	background-image: url(../../public/./VirginiaClassApproaching.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		height: 400px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
 }
 
 .home__heroText {
@@ -18,23 +19,79 @@
 	color: $white;
 	display: flex;
 	font-family: 'Muli', sans-serif;
-	font-size: 30px;
+	font-size: $large-hero-font-size;
 	font-weight: 700;
-	height: 100px;
+	justify-content: center;
 	margin: 0 auto;
-	max-width: $screen-sm-min - 100px;
+	max-width: $screen-sm-min - 50px;
+	padding: 5px 0;
 	text-align: center;
 }
 
 
-.home {
-	.main__container--lightgrey {
-		margin: 25px auto;
-		max-width: $screen-sm-min - 200px;
-	}
+.home__container--blackgrey {
+	background-color: $blackgrey;
+}
 
+
+.home__container--shadow {
+	@include main-box-shadow;
+	padding: 25px 25px 0;
+}
+
+.home__container--lightgrey {
+	background-color: $main__background--grey;
+	box-shadow: 0 2px 10px $main__boxShadow--grey;
+	margin: 0 auto;
+	max-width: $screen-sm-min - 200px;
+}
+
+.home {
 	p {
-		margin: 20px;
+		margin: 0;
+		padding: 20px 25px 0;
+	}
+	
+	p:first-child {
+		padding-top: 25px;
+	}
+	
+	p:last-child {
+		padding-bottom: 25px;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+	.home {
+		margin-top: 0;
+		padding-bottom: $footerHeightTotal + 25px;
+		
+		p {
+			padding: 25px 45px 0;
+		}
+
+		p:first-child {
+			padding-top: 45px;
+		}
+
+		p:last-child {
+			padding-bottom: 45px;
+		}
+		
+	}
+	
+	.home__heroImg {
+		height: 400px;
+	}
+	
+	.home__heroText {
+		justify-content: center;
+		max-width: $screen-sm-min - 50px;
+		padding: 31px 0;
+	}
+	
+	.home__container--lightgrey {
+		max-width: $screen-sm-min - 200px;
 	}
 }
 
@@ -43,7 +100,7 @@
 		max-width: $screen-md-min - 50px;
 	}
 	
-	.home .main__container--lightgrey {
+	.home .home__container--lightgrey {
 		max-width: $screen-md-min - 200px;
 	}
 }
@@ -53,7 +110,7 @@
 		max-width: $screen-md-min;
 	}
 	
-	.home .main__container--lightgrey {
+	.home__container--lightgrey {
 		max-width: $screen-md-min - 200px;
 	}
 }

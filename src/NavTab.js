@@ -5,11 +5,14 @@ class NavTab extends Component {
 
   render() {
     return (
-			<li className="navItem">
-				<Link to={this.props.navLink} className="navItem__link" activeClassName="navItem--active"><span className="navItem__underline">{this.props.content}</span></Link>
+			<li className={`${this.props.classBlock}__navItem`}>
+				<Link to={`/SpectrumTechnologyGroup${this.props.navLink}`} className={`${this.props.classBlock}__link`} activeClassName={`${this.props.classBlock}__navItem--active`} onClick={this.props.toggleHamburger}><span className={`${this.props.classBlock}__underline`}>{this.props.content}</span></Link>
 			</li>
     );
   }
 }
 
 export default NavTab;
+
+
+/* add proptypes */

@@ -7,11 +7,14 @@ $blue: #3569a4;
 $gold: #CCAC55;
 $white: #fff;
 
-$blackgrey: #181c1f;
+/*grey from lightest to darkest*/
 $lightgrey: #e0e0e0;
 $mediumgrey: #8b939b;
-$mediumdarkgrey: #3a3a3a;
 $textgrey: #666;
+$meddarkgrey: #505050;
+$mediumdarkgrey: #3a3a3a;
+$blackgrey: #181c1f;
+
 
 /* Header Colors */
 $header__background--blackGrey: $blackgrey;
@@ -41,6 +44,17 @@ $footer__copyright--textGrey: $textgrey;
 
 
 /*
+ * Text Heights
+ * ========================================================================== */
+
+$large-hero-font-size: 30px;
+$large-header-font-size: 25px;
+$normal-font-size: 14px;
+$small-font-size: 12px;
+$smallest-font-size: 11px;
+
+
+/*
  * Media queries breakpoints
  * ========================================================================== */
 
@@ -59,4 +73,10 @@ $screen-lg-min: 1200px; /* Large screen / wide desktop */
 $footerHeight: 170px;
 $copyrightHeight: 50px;
 $footerHeightTotal: $footerHeight + $copyrightHeight;
+
+$footerHeight--mobile: 567px;
+$footerHeightTotal--mobile: $footerHeight--mobile + $copyrightHeight;
+
+$headerHeight--mobile: 40px;
+
 

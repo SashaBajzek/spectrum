@@ -4,7 +4,6 @@
 
 * {
 	box-sizing: border-box;
-	font-family: 'Muli', 'Helvetica', sans-serif;
 }
 
 html {
@@ -14,23 +13,9 @@ html {
 
 body {
 	background-color: $white;
-	font-size: 14px;
+	font-family: 'Muli', 'Helvetica', sans-serif;
+	font-size: $normal-font-size;
 	margin: 0 auto;
-}
-
-.main__container {
-	margin: 0 auto;
-	max-width: $screen-sm-min - 100px;
-}
-
-.main__container--lightgrey {
-	background-color: $main__background--grey;
-	box-shadow: 0 2px 10px $main__boxShadow--grey;
-	padding: 25px;
-}
-
-.main__container--blackgrey {
-	background-color: $blackgrey;
 }
 
 ul {
@@ -43,11 +28,24 @@ a {
 
 main {
 	background-color: $white;
-	margin-bottom: $footerHeightTotal + 25px;
-	margin-top: 25px;
-	
-	h1 {
-		margin: 0;
+}
+
+
+
+
+
+.main__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
+}
+
+
+
+
+@media (min-width: $screen-sm-min) {
+	.main__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
 }
 

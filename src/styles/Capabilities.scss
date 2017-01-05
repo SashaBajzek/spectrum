@@ -1,0 +1,92 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.capabilities {
+	padding-top: 25px;
+	padding-bottom: $footerHeightTotal--mobile + 25px;
+}
+
+.capabilities__heading {
+	text-align: center;
+}
+
+.capabilities__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0;
+}
+
+.capability__box {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+	margin-bottom: 25px;
+	padding: 24px;
+	width: 310px;
+}
+
+.capability__background {
+	height: 116px;
+	width: 262px;
+}
+
+.capability__background--VirginiaClassUnderway {
+	background: $main__background--grey url(../../public/./VirginiaClassUnderway.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capability__background--CanadianVictoriaClassSubmarine {
+	background: $main__background--grey url(../../public/./CanadianVictoriaClassSubmarine.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capability__background--seawolfUnderway {
+	background: $main__background--grey url(../../public/./seawolfUnderway.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capability__background--VirginiaClassApproaching {
+	background: $main__background--grey url(../../public/./VirginiaClassApproaching.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+
+/* CSS for the Capability Boxes */
+.capability__heading {
+	color: #3a3a3a;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.capability__description {
+	margin: 0;
+}
+
+.capabilities__section {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+
+
+/* Tablet Screen Size */
+
+@media (min-width: $screen-sm-min) {
+	.capabilities {
+		padding-bottom: $footerHeightTotal + 25px;
+}
+	
+	.capabilities__heading {
+		text-align: left;
+	}
+	
+	.capabilities__list {
+		justify-content: space-between;
+	}
+	
+	.capabilities__section {
+		padding: 0;
+	}
+	
+}

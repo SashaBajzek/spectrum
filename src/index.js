@@ -5,6 +5,7 @@ import App from './App';
 import Home from './Home';
 import AboutUs from './AboutUs';
 import Capabilities from './Capabilities';
+import Services from './Services';
 import Contracts from './Contracts';
 import TaskOrders from './TaskOrders';
 import TeamMembers from './TeamMembers';
@@ -17,25 +18,29 @@ import ContactUs from './ContactUs';
 import Tools from './Tools';
 
 ReactDOM.render(
-		<Router history={browserHistory}>
+		<Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
 			<Route component={App}>
-				<Route path="/" component={Home} />
-				<Route path="/AboutUs" component={AboutUs} />
-				<Route path="/Capabilities" component={Capabilities} />
-				<Route path="/ContractVehicles" component={ContractVehicles}>
-					<IndexRedirect to="/ContractVehicles/Contracts" />
-					<Route path="/ContractVehicles/Contracts" component={Contracts} />
-					<Route path="/ContractVehicles/TaskOrders" component={TaskOrders} />
-					<Route path="/ContractVehicles/TeamMembers" component={TeamMembers} >
-						<IndexRedirect to="/ContractVehicles/TeamMembers/Mantech" />
-						<Route path="/ContractVehicles/TeamMembers/Mantech" component={TeamMemberMantech} />
-						<Route path="/ContractVehicles/TeamMembers/Progeny" component={TeamMemberProgeny} />
-						<Route path="/ContractVehicles/TeamMembers/GeneralDynamics" component={TeamMemberGenDynamics} />
+				<Route path="/SpectrumTechnologyGroup/" component={Home} />
+				<Route path="/SpectrumTechnologyGroup/about-us" component={AboutUs} />
+				<Route path="/SpectrumTechnologyGroup/services" component={Services} >
+					<IndexRedirect to="/SpectrumTechnologyGroup/capabilities" />
+					<Route path="/SpectrumTechnologyGroup/capabilities" component={Capabilities} />
+					<Route path="/SpectrumTechnologyGroup/quality-assurance" component={QualityAssurance} />
+				</Route>
+				<Route path="/SpectrumTechnologyGroup/contract-vehicles" component={ContractVehicles}>
+					<IndexRedirect to="/SpectrumTechnologyGroup/contract-vehicles/contracts" />
+					<Route path="/SpectrumTechnologyGroup/contract-vehicles/contracts" component={Contracts} />
+					<Route path="/SpectrumTechnologyGroup/contract-vehicles/task-orders" component={TaskOrders} />
+					<Route path="/SpectrumTechnologyGroup/contract-vehicles/team-members" component={TeamMembers} >
+						<IndexRedirect to="/SpectrumTechnologyGroup/contract-vehicles/team-members/mantech" />
+						<Route path="/SpectrumTechnologyGroup/contract-vehicles/team-members/mantech" component={TeamMemberMantech} />
+						<Route path="/SpectrumTechnologyGroup/contract-vehicles/team-members/progeny" component={TeamMemberProgeny} />
+						<Route path="/SpectrumTechnologyGroup/contract-vehicles/team-members/general-dynamics" component={TeamMemberGenDynamics} />
 					</Route>
 				</Route>
-				<Route path="/QualityAssurance" component={QualityAssurance} />
-				<Route path="/ContactUs" component={ContactUs} />
-				<Route path="/Tools" component={Tools} />
+				<Route path="/SpectrumTechnologyGroup/quality-assurance" component={QualityAssurance} />
+				<Route path="/SpectrumTechnologyGroup/contact-us" component={ContactUs} />
+				<Route path="/SpectrumTechnologyGroup/tools" component={Tools} />
 				<Route path="*" component={Home} />
 			</Route>
 		</Router>,

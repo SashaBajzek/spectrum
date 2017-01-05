@@ -1,0 +1,160 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.aboutUs {
+	margin-top: $headerHeight--mobile;
+	padding-bottom: $footerHeightTotal--mobile + 25px;
+}
+
+.aboutUs__heroImg {
+	background: $main__background--grey url(../../public/./VirginiaClassUnderway.jpg) 50% no-repeat;
+	background-size: cover;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+}
+
+.aboutUs__quickFacts {
+	align-items: center;
+	background-color: $main__background--blackgrey;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	left: 10px;
+	position: absolute;
+	right: 10px;
+	top: -135px;
+}
+
+.quickFacts__heading {
+	color: $white;
+	font-size: $normal-font-size;
+	font-weight: bold;
+	margin: 10px auto 0;
+}
+
+.quickFacts__list {
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.quickFacts__item {
+	border-left: 1px dashed #555;
+	display: flex;
+	flex-direction: column;
+	height: 45px;
+	justify-content: space-between;
+	padding: 0 10px;
+	width: 100px;
+	
+	h4 {
+		color: #4b5256;
+		font-size: $smallest-font-size;
+		margin: 0;
+		text-align: center;
+	}
+	
+	p {
+		color: #8b939b;
+		font-size: 16px;
+		margin: 0;
+		padding: 5px 0;
+		text-align: center;
+	}	
+}
+
+.quickFacts__item:first-child {
+	border-left: none;
+}
+
+
+
+
+.aboutUs__shadow {
+	@include main-box-shadow;
+	padding-top: 65px;
+}
+
+.aboutUs__container {
+	margin: 0 auto;
+	max-width: $screen-sm-min - 100px;
+	padding: 0 25px;
+	position: relative;
+}
+
+/* Tablet Screen Size */
+
+@media (min-width: $screen-sm-min) {
+	.aboutUs {
+		margin-top: 0;
+		padding-bottom: $footerHeightTotal + 25px;
+	}
+	
+	.aboutUs__heroImg {
+		height: 300px;
+	}
+	
+	.aboutUs__container {
+		max-width: $screen-sm-min - 50px;
+		padding: 0;
+	}
+	
+	.aboutUs__quickFacts {
+		align-items: flex-start;
+		flex-direction: row;
+		height: 80px;
+		left: 0;
+		right: 0;
+		top: -125px;
+	}
+	
+	.quickFacts__heading {
+		margin: auto 0 auto 30px;
+	}
+	
+	.quickFacts__list {
+		margin: auto 0 auto auto;
+	}
+	
+	.quickFacts__item {
+		padding: 0 0 0 20px;
+		width: 125px;
+		
+		h4 {
+			text-align: left;
+		}
+		
+		p {
+			text-align: left;
+		}
+	}
+	
+	.quickFacts__item:first-child {
+		border-left: 1px dashed #555;
+	}
+
+}
+
+@media (min-width: $screen-md-min) {
+	.aboutUs__heroImg {
+		height: 400px;
+	}
+	
+	.aboutUs__container {
+		max-width: $screen-md-min - 50px;
+	}
+	
+	.quickFacts__item {
+		padding-left: 30px;
+		width: 150px;
+	}
+	
+
+}
+
+@media (min-width: $screen-lg-min) {
+	.aboutUs__container {
+		max-width: $screen-md-min;
+	}
+}

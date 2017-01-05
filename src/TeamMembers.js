@@ -6,16 +6,16 @@ import './styles/TeamMembers.scss';
 class TeamMembers extends Component {
   render() {
     return (
-			<main>
+			<main className="teamMembers">
 				<div className="main__container">
-					<h1>Team Members</h1>
+					<h1>TEAM MEMBERS</h1>
 					<p>In order to assure the Government of high-quality performance under the expanded scope of the solicitation, Spectrum Technology has formed a superb team with demonstrated capabilities and demonstrated performance. The three team partners under our proposal bring a variety of technical, engineering, and management strengths and skills to our proposal.</p>
 					<div className="navGroup--teamMembers">
 						<nav className="teamMembers__nav">
 							<ul className="teamMembers__list">
-								<NavTab navLink="/ContractVehicles/TeamMembers/Mantech" content="MANTECH SYSTEMS ENGINEERING CORPORATION" />
-								<NavTab navLink="/ContractVehicles/TeamMembers/Progeny" content="PROGENY SYSTEMS CORPORATION" />
-								<NavTab navLink="/ContractVehicles/TeamMembers/GeneralDynamics" content="GENERAL DYNAMICS INFORMATION TECHNOLOGY" />
+								<NavTab classBlock="team-nav" navLink="/contract-vehicles/team-members/mantech" content="MANTECH SYSTEMS ENGINEERING CORPORATION" />
+								<NavTab classBlock="team-nav" navLink="/contract-vehicles/team-members/progeny" content="PROGENY SYSTEMS CORPORATION" />
+								<NavTab classBlock="team-nav" navLink="/contract-vehicles/team-members/general-dynamics" content="GENERAL DYNAMICS INFORMATION TECHNOLOGY" />
 							</ul>
 						</nav>
 					</div>

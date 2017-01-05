@@ -1,0 +1,48 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.contracts {
+	background-color: $lightgrey;
+	padding: 25px 0 $footerHeightTotal--mobile + 25px;
+}
+
+.contracts__heading--main {
+	color: $blackgrey;
+	text-align: center;
+}
+
+.contracts__heading--secondary {
+	color: $mediumdarkgrey;
+	text-align: center;
+}
+
+.contracts__image {
+	display: block;
+	margin: 0 auto;
+	max-width: 80%;
+}
+
+
+
+
+/* Tablet Screen Size */
+
+@media (min-width: $screen-sm-min) {
+	.contracts {
+		padding-bottom: $footerHeightTotal + 25px;
+	}
+	
+	.contracts__heading--main {
+		text-align: left;
+	}
+	
+	.contracts__heading--secondary {
+		text-align: left;
+	}
+	
+	.contracts__image {
+		margin: 0;
+		max-width: 80%;
+	}
+	
+}

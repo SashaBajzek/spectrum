@@ -1,23 +1,20 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.footer__container--dark {
-	background-color: $footer__background--blackGrey;
+.footer {
+	background-color: $blackgrey;
 	bottom: 0;
 	position: absolute;
 	width: 100%;
 }
 
-.footer__root {
+.footer__container--dark {
 	background-color: $footer__background--blackGrey;
-	display: flex;
-	flex-grow: 1;
 	font-family: 'Muli', sans-serif;
-	font-size: 12px;
-	height: $footerHeight;
-	justify-content: space-between;
+	font-size: $small-font-size;
+	
 	margin: 0 auto;
-	max-width: $screen-sm-min - 100px;
+	max-width: $screen-sm-min - 50px;
 	padding-top: 40px;
 	text-transform: uppercase;
 }
@@ -25,60 +22,58 @@
 .footer__list {
 	margin: 0;
 	padding: 0;
-	
-	.navItem {
-		text-align: center;
-	}
-	
-	.navItem__link {
-		align-items: center;
-		color: $footer__nav--textGrey;
-		display: flex;
-		line-height: 16px;
-		padding: 0 0 6px 0;
-		text-transform: uppercase;
-	}
-
-	.navItem--active {
-		color: $footer__nav--activeGold;
-	}
-
-	.navItem__underline {
-		border-bottom: solid transparent 1px;
-		flex-shrink: 0;
-	}
-	
-	.navItem__link:hover {
-		padding-bottom: 6px;
-		
-		.navItem__underline {
-			border-bottom: solid $footer__nav--textGrey 1px;
-			transition: border-bottom .2s ease;
-		}
-	}
-
 }
 
+.footer-nav__link {
+	color: $footer__nav--textGrey;
+	display: block;
+	line-height: 16px;
+	padding: 0 0 6px 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.footer-nav__navItem--active {
+	color: $gold;
+}
+
+.footer-nav__underline {
+	border-bottom: solid transparent 1px;
+	flex-shrink: 0;
+}
+
+.footer-nav__link:hover {
+	padding-bottom: 6px;
+
+	.footer-nav__underline {
+		border-bottom: solid $footer__nav--textGrey 1px;
+		transition: border-bottom .2s ease;
+	}
+}
 
 .footer__column {
-	border-right: dashed $footer__border--grey 1px;
-	height: 100px;
-	padding-left: 25px;
+	border-bottom: dashed $footer__border--grey 1px;
+	padding: 25px 0 16px 0;
 	text-transform: uppercase;
-	width: 270px;
+}
+
+.footer__column:first-child {
+	padding-top: 0;
 }
 
 .footer__column:last-of-type {
-	border-right: none;
+	border-bottom: none;
+	padding-bottom: 25px;
 }
 
 .column__header {
 	color: $white;
-	font-size: 11px;
+	font-size: $smallest-font-size;
 	font-weight: bold;
 	line-height: 0.8;
 	margin: 0;
 	padding-bottom: 10px;
+	text-align: center;
 }
 
 .footer__logo {
@@ -86,8 +81,8 @@
 	background-image: url(../../public/STG_Logo_Clear-white+grey.svg);
 	flex-shrink: 0;
 	height: 26px;
-	margin: auto 20px auto 0;
-	width: 160px;
+	margin: auto;
+	width: 107px;
 
 	.navItem__link {
 		display: block;
@@ -98,9 +93,10 @@
 
 .footer__address {
 	color: $footer__address--textGrey;
-	font-size: 12px;
+	font-size: $small-font-size;
 	line-height: 18px;
 	margin-top: 4px;
+	text-align: center;
 }
 
 .footer__copyright {
@@ -108,34 +104,83 @@
 	background-color: $footer__copyright--backgroundBlack;
 	color: $footer__copyright--textGrey;
 	display: flex;
-	font-size: 12px;
+	font-size: $small-font-size;
 	height: $copyrightHeight;
 	justify-content: center;
 	text-transform: uppercase;
 
-	p {
-		max-width: $screen-sm-min - 100px;
+	small {
+		max-width: $screen-sm-min - 50px;
 		text-align: center;
 	}	
 }
 
+@media (min-width: $screen-sm-min) {
+	.footer__container--dark {
+		height: $footerHeight;
+		max-width: $screen-sm-min - 50px;
+	}
+	
+	.footer__nav {
+		display: flex;
+		flex-grow: 1;
+		justify-content: space-between;
+	}
+	
+	.footer-nav__link {
+		align-items: center;
+		display: flex;
+		text-align: left;
+	}
+	
+	.footer__column {
+		border-bottom: none;
+		border-right: dashed $footer__border--grey 1px;
+		height: 100px;
+		margin-bottom: 0;
+		padding: 0 0 0 25px;
+		width: 270px;
+	}
+	
+	.footer__column:last-of-type {
+		border-right: none;
+		padding-bottom: 0;
+	}
+	
+	.column__header {
+		text-align: left;
+	}
+	
+	.footer__logo {
+		margin: auto 20px auto 0;
+		width: 160px;
+	}
+	
+	.footer__address {
+		text-align: left;
+	}
+	
+	.footer__copyright small {
+		max-width: $screen-sm-min - 50px;
+	}
+}
+
 @media (min-width: $screen-md-min) {
-	.footer__root {
+	.footer__container--dark {
 		max-width: $screen-md-min - 50px;
 	}
 	
-	.footer__copyright p {
+	.footer__copyright small {
 		max-width: $screen-md-min - 50px;
 	}
-
 }
 
 @media (min-width: $screen-lg-min) {
-	.footer__root {
+	.footer__container--dark {
 		max-width: $screen-md-min;
 	}
 	
-	.footer__copyright p {
+	.footer__copyright small {
 		max-width: $screen-md-min;
 	}
 }

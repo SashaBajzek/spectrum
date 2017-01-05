@@ -1,11 +1,31 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.contactUs__main {
-	display: flex;
-	justify-content: space-between;
+.contactUs {
+	@include main-box-shadow;
+	margin-top: 0;
+	padding: 25px 10px $footerHeightTotal--mobile + 25px;
 }
 
 .contactUs__googleMap {
-	margin-right: 200px;
+	margin-bottom: 15px;
+}
+
+/* Tablet Screen Size */
+
+@media (min-width: $screen-sm-min) {
+	.contactUs {
+		padding: 25px 0 $footerHeightTotal + 25px;
+	}
+	
+	.contactUs__googleMap {
+		float: right;
+		margin-top: -60px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.contactUs__googleMap {
+		margin-right: 200px;
+	}
 }

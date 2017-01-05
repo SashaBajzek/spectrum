@@ -5,17 +5,17 @@ class TeamMemberMantech extends Component {
   render() {
     return (	
 			<div className="teamMember teamMember--ManTech">
-				<div className="googleMap teamMember__googleMap">
-							<SimpleMap lat={38.279819} lng={-76.465448} />
-				</div>
 				<div className="teamMember__main">
-					<h2>ManTech Systems Engineering Corporation</h2>
+					<h2>MANTECH SYSTEMS ENGINEERING CORPORATION</h2>
+					<div className="googleMap teamMember__googleMap">
+						<SimpleMap lat={38.279819} lng={-76.465448} />
+					</div>
 					<h3>Address</h3>
-					<address>
+					<div className="teamMember__address">
 						46610 Expedition Drive<br />
 						Suite 101<br />
 						Lexington Park, MD 20653-2112
-					</address>
+					</div>
 					<h3>Existing SeaPort-e Prime?</h3>
 					<p>Yes</p>
 					<h3>CAGE Code</h3>

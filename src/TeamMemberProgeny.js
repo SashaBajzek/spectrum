@@ -5,16 +5,16 @@ class TeamMemberProgeny extends Component {
   render() {
     return (	
 			<div className="teamMember teamMember--Progeny">
-				<div className="googleMap teamMember__googleMap">
-						<SimpleMap lat={38.751628} lng={-77.523104} />
-				</div>
 				<div className="teamMember__main">
-					<h2>Progeny Systems Corporation</h2>
+					<h2>PROGENY SYSTEMS CORPORATION</h2>
+					<div className="googleMap teamMember__googleMap">
+						<SimpleMap lat={38.751628} lng={-77.523104} />
+					</div>
 					<h3>Address:</h3>
-					<address>
+					<div className="teamMember__address">
 						9500 Innovation Drive<br />
 						Manassas, VA 20110
-					</address>
+					</div>
 					<h3>Existing SeaPort-e Prime:</h3>
 					<p>N00178-05-D-4509</p>
 					<h3>CAGE Code:</h3>
@@ -43,7 +43,7 @@ class TeamMemberProgeny extends Component {
 					<p>System, Hardware and Software Engineering Support; Program support; Pre-Production/Production support; Installation support; Test and Evaluation support; and Installation support for relevant tasks in support of the SOW areas listed.</p>
 					<h3>Functional Area(s) of the SOW Team Member can perform - e.g. 3.2, 3.7 etc.</h3>
 					<p>Progeny has office presence in Zones 1, 2, 3 ,4, 5 and 6 and is capable of supporting the following Statement of Work Areas:</p>
-					<ol>
+					<ul>
 						<li>3.1 Research & Development Support</li>
 						<li>3.2 Engineering, System Engineering and Process Engineering Support</li>
 						<li>3.3 Modeling, Simulation, Stimulation and Analysis Support</li>
@@ -64,7 +64,7 @@ class TeamMemberProgeny extends Component {
 						{/*Missing 3.18*/}
 						<li>3.19 In-Service Engineering, Fleet Introduction, Installation and Checkout Support</li>
 						<li>3.20 Program Support</li>
-					</ol>
+					</ul>
 					<h3>Past Performance: List 3 past performance (or current) contracts within the past 3 years functionally, relevant to subject RFP by: Contract Number (Prime or Sub), Contract Title, Customer (e.g. NAVAIR, etc. POC and Phone Number</h3>
 					<ol>
 						<li>

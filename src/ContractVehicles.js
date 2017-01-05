@@ -7,12 +7,12 @@ class ContractVehicles extends Component {
   render() {
     return (
 			<div>
-				<div className="secondaryNav__root">
+				<div className="secondaryNav">
 					<nav className="secondaryNav__nav">
 						<ul className="secondaryNav__navGroup--main">
-							<NavTab navLink="/ContractVehicles/Contracts" content="CONTRACTS" />
-							<NavTab navLink="/ContractVehicles/TaskOrders" content="TASK ORDERS" />
-							<NavTab navLink="/ContractVehicles/TeamMembers" content="TEAM MEMBERS"/>
+							<NavTab classBlock="secondary-nav" navLink="/contract-vehicles/contracts" content="CONTRACTS" />
+							<NavTab classBlock="secondary-nav" navLink="/contract-vehicles/task-orders" content="TASK ORDERS" />
+							<NavTab classBlock="secondary-nav" navLink="/contract-vehicles/team-members" content="TEAM MEMBERS"/>
 						</ul>
 					</nav>
 				</div>
