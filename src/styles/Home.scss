@@ -2,12 +2,13 @@
 @import './mixins.scss';
 
 .home {
+	flex: 1 0 auto;
 	margin-top: $headerHeight--mobile;
-	padding-bottom: $footerHeightTotal--mobile + 25px;
+	padding-bottom: 25px;
 }
 
 .home__heroImg {
-	background-image: url(../../public/./VirginiaClassApproaching.jpg);
+	background-image: url(../../public/./VirginiaApproach-home-sm.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 200px;
@@ -28,15 +29,13 @@
 	text-align: center;
 }
 
-
-.home__container--blackgrey {
+.home__background--blackgrey {
 	background-color: $blackgrey;
 }
 
-
-.home__container--shadow {
+.home__shadow {
 	@include main-box-shadow;
-	padding: 25px 25px 0;
+	padding-top: 25px;
 }
 
 .home__container--lightgrey {
@@ -61,10 +60,12 @@
 	}
 }
 
+
+/* Media Sizes */
+
 @media (min-width: $screen-sm-min) {
 	.home {
 		margin-top: 0;
-		padding-bottom: $footerHeightTotal + 25px;
 		
 		p {
 			padding: 25px 45px 0;
@@ -81,6 +82,7 @@
 	}
 	
 	.home__heroImg {
+		background-image: url(../../public/./VirginiaApproach-home-lg.jpg);
 		height: 400px;
 	}
 	

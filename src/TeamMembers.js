@@ -7,7 +7,7 @@ class TeamMembers extends Component {
   render() {
     return (
 			<main className="teamMembers">
-				<div className="main__container">
+				<div className="teamMembers__container">
 					<h1>TEAM MEMBERS</h1>
 					<p>In order to assure the Government of high-quality performance under the expanded scope of the solicitation, Spectrum Technology has formed a superb team with demonstrated capabilities and demonstrated performance. The three team partners under our proposal bring a variety of technical, engineering, and management strengths and skills to our proposal.</p>
 					<div className="navGroup--teamMembers">

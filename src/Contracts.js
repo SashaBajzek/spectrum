@@ -5,7 +5,7 @@ class Contracts extends Component {
   render() {
     return (
 			<main className="contracts">
-				<div className="main__container">
+				<div className="contracts__container">
 					<h1 className="contracts__heading--main">CONTRACTS</h1>
 					<h2 className="contracts__heading--secondary">N00178-14-D-7932</h2>
 					<img className="contracts__image" src="../N0017814D7932redacted.jpg" alt="N00178-14-D-7932" />

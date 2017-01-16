@@ -3,6 +3,7 @@
 
 .header {
 	background-color: $header__background--blackGrey;
+	flex-shrink: 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -236,14 +237,6 @@
 	background-color: $textgrey;
 	display: none;
 }
-/*
-
-TODO See if i still need this class
-
-.secondary-nav-mobile__navItem {
-	padding: 7px 0;
-}
-*/
 
 .header-nav-main__navItem--contract-active ~ ul,
 .header-nav-main__navItem--services-active ~ ul {
@@ -278,10 +271,7 @@ TODO See if i still need this class
 }
 
 
-
-
-
-/* Tablet Screen Size */
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
 	

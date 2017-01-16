@@ -3,7 +3,13 @@
 
 .taskOrders {
 	background-color: $lightgrey;
-	padding: 25px 0 $footerHeightTotal--mobile + 25px;
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
+}
+
+.taskOrders__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
 }
 
 .taskOrders__heading--main {
@@ -37,8 +43,6 @@
 	}
 }
 
-
-
 .taskOrders__link:hover {
 	color: $mediumgrey;
 }
@@ -50,15 +54,14 @@
 }
 
 
-
-
-/* Tablet Screen Size */
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.taskOrders {
-		padding-bottom: $footerHeightTotal + 25px;
+	.taskOrders__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
-	
+
 	.taskOrders__heading--main {
 		text-align: left;
 	}
@@ -80,4 +83,16 @@
 		max-width: 80%;
 	}
 	
+}
+
+@media (min-width: $screen-md-min) {
+	.taskOrders__container {
+		max-width: $screen-md-min - 50px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.taskOrders__container {
+		max-width: $screen-md-min;
+	}
 }

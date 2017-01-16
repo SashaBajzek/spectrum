@@ -2,7 +2,8 @@
 @import './mixins.scss';
 
 .quality {
-	padding: 25px 0 $footerHeightTotal--mobile + 25px;
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
 }
 
 .quality__heading--main {
@@ -51,12 +52,10 @@
 }
 
 
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.quality {
-		padding-bottom: $footerHeightTotal + 25px;
-	}
-	
+
 	.quality__heading--main {
 		margin: 18.76px auto 0;
 		max-width: $screen-sm-min - 50px;

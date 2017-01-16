@@ -8,7 +8,7 @@ class Tools extends Component {
   render() {
     return (
 			<main className="tools">
-				<div className="main__container">
+				<div className="tools__container">
 					<h1 className="tools__heading">EMPLOYEE TOOLS:</h1>
 					<nav className="tools__nav">
 						<ul className="tools__list">

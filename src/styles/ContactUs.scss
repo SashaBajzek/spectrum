@@ -3,19 +3,31 @@
 
 .contactUs {
 	@include main-box-shadow;
+	flex: 1 0 auto;
 	margin-top: 0;
-	padding: 25px 10px $footerHeightTotal--mobile + 25px;
+	padding: 25px 10px 25px;
+}
+
+.contactUs__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
 }
 
 .contactUs__googleMap {
 	margin-bottom: 15px;
 }
 
-/* Tablet Screen Size */
+
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
 	.contactUs {
-		padding: 25px 0 $footerHeightTotal + 25px;
+		padding: 25px 0 25px;
+	}
+	
+	.contactUs__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
 	
 	.contactUs__googleMap {
@@ -25,7 +37,17 @@
 }
 
 @media (min-width: $screen-md-min) {
+	.contactUs__container {
+		max-width: $screen-md-min - 50px;
+	}
+	
 	.contactUs__googleMap {
 		margin-right: 200px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.contactUs__container {
+		max-width: $screen-md-min;
 	}
 }

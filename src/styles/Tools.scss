@@ -2,7 +2,13 @@
 @import './mixins.scss';
 
 .tools {
-	padding: 25px 0 $footerHeightTotal--mobile + 25px;
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
+}
+
+.tools__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
 }
 
 .tools__heading {
@@ -47,9 +53,12 @@
 }
 
 
+/* Media Sizes */
+
 @media (min-width: $screen-sm-min) {
-	.tools {
-		padding-bottom: $footerHeightTotal + 25px;
+	.tools__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
 	
 	.tools__heading {
@@ -62,12 +71,20 @@
 }
 
 @media (min-width: $screen-md-min) {
+	.tools__container {
+		max-width: $screen-md-min - 50px;
+	}
+	
 	.tools__nav {
 		max-width: $screen-md-min - 50px;
 	}
 }
 
 @media (min-width: $screen-lg-min) {
+	.tools__container {
+		max-width: $screen-md-min;
+	}
+	
 	.tools__nav {
 		max-width: $screen-md-min;
 	}

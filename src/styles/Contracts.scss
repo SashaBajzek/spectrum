@@ -3,7 +3,13 @@
 
 .contracts {
 	background-color: $lightgrey;
-	padding: 25px 0 $footerHeightTotal--mobile + 25px;
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
+}
+
+.contracts__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
 }
 
 .contracts__heading--main {
@@ -23,13 +29,12 @@
 }
 
 
-
-
-/* Tablet Screen Size */
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.contracts {
-		padding-bottom: $footerHeightTotal + 25px;
+	.contracts__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
 	
 	.contracts__heading--main {
@@ -44,5 +49,16 @@
 		margin: 0;
 		max-width: 80%;
 	}
-	
+}
+
+@media (min-width: $screen-md-min) {
+	.contracts__container {
+		max-width: $screen-md-min - 50px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.contracts__container {
+		max-width: $screen-md-min;
+	}
 }

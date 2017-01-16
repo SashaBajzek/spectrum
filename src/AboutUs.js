@@ -21,7 +21,7 @@ class AboutUs extends Component {
 								</li>
 								<li className="quickFacts__item">
 									<h4>EMPLOYEES</h4>
-									<p>42</p>
+									<p>37</p>
 								</li>
 							</ul>
 						</div>

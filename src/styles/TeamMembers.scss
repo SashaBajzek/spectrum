@@ -2,7 +2,13 @@
 @import './mixins.scss';
 
 .teamMembers {
-	padding: 25px 10px $footerHeightTotal--mobile + 25px;
+	flex: 1 0 auto;
+	padding: 25px 10px 25px;
+}
+
+.teamMembers__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
 }
 
 .teamMembers__nav {
@@ -63,11 +69,17 @@
 	flex-shrink: 0;
 }
 
-/* Tablet Screen Size */
+
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
 	.teamMembers {
-		padding: 25px 0 $footerHeightTotal + 25px;
+		padding: 25px 0 25px;
+	}
+	
+	.teamMembers__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
 	}
 	
 	.teamMembers__list {
@@ -103,6 +115,10 @@
 /* Desktop Screen Size */
 
 @media (min-width: $screen-md-min) {
+	.teamMembers__container {
+		max-width: $screen-md-min - 50px;
+	}
+	
 	.teamMembers__nav {
 		max-width: $screen-md-min - 50px;
 	}
@@ -116,6 +132,10 @@
 /* XL Desktop Screen Size */
 
 @media (min-width: $screen-lg-min) {
+	.teamMembers__container {
+		max-width: $screen-md-min;
+	}
+	
 	.teamMembers__nav {
 		max-width: $screen-md-min;
 	}

@@ -6,7 +6,7 @@ class Capabilities extends Component {
   render() {
     return (
 			<main className="capabilities">
-				<div className="main__container">
+				<div className="capabilities__container">
 					<h1 className="capabilities__heading">CAPABILITIES:</h1>
 					<ul className="capabilities__list">
 						<CapabilitiesBox heading="Program Management" backgroundImg="VirginiaClassApproaching" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />

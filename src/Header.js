@@ -47,7 +47,6 @@ class Header extends Component {
 					<nav className="header__nav">
 					 <ul className="header__navGroup--main header__list">
 						<NavTab classBlock="header-nav-main" navLink="/about-us" content="ABOUT SPECTRUM" toggleHamburger={this.closeHamburger} />
-			
 						<li className="header-nav-main__navItem">
 							<Link to="/SpectrumTechnologyGroup/services" activeClassName="header-nav-main__navItem--active triangle__secondaryNav--active header-nav-main__navItem--services-active" className="header-nav-main__link" ><span className="header-nav-main__underline">SERVICES</span></Link>
 
@@ -56,13 +55,7 @@ class Header extends Component {
 									<NavTab classBlock="secondary-nav-mobile" navLink="/capabilities" content="CAPABILITIES" toggleHamburger={this.closeHamburger} />
 									<NavTab classBlock="secondary-nav-mobile" navLink="/quality-assurance" content="QUALITY ASSURANCE" toggleHamburger={this.closeHamburger} />
 								</ul>
-			
 						</li>
-			
-						
-			
-			
-			
 			
 						<li className="header-nav-main__navItem">
 							<Link to="/SpectrumTechnologyGroup/contract-vehicles" activeClassName="header-nav-main__navItem--active triangle__secondaryNav--active header-nav-main__navItem--contract-active" className="header-nav-main__link" ><span className="header-nav-main__underline">CONTRACT VEHICLES</span></Link>
@@ -73,8 +66,6 @@ class Header extends Component {
 								<NavTab classBlock="secondary-nav-mobile" navLink="/contract-vehicles/task-orders" content="TASK ORDERS" toggleHamburger={this.closeHamburger}  />
 								<NavTab classBlock="secondary-nav-mobile" navLink="/contract-vehicles/team-members" content="TEAM MEMBERS" toggleHamburger={this.closeHamburger}  />
 							</ul>
-			
-			
 						</li>
 					 </ul>
 					 <ul className="header__navGroup--contact header__list">

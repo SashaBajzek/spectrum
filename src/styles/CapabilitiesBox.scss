@@ -1,0 +1,46 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.capabilitiesBox {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+	margin-bottom: 25px;
+	padding: 24px;
+	width: 310px;
+}
+
+.capabilitiesBox__background {
+	height: 116px;
+	width: 262px;
+}
+
+.capabilitiesBox__background--VirginiaClassUnderway {
+	background: $main__background--grey url(../../public/./VictoriaSub-capabilities.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--CanadianVictoriaClassSubmarine {
+	background: $main__background--grey url(../../public/./VictoriaSub-capabilities.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--seawolfUnderway {
+	background: $main__background--grey url(../../public/./Seawolf-capabilties.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--VirginiaClassApproaching {
+	background: $main__background--grey url(../../public/./VirginiaApproach-capabilities.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__heading {
+	color: #3a3a3a;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.capabilitiesBox__description {
+	margin: 0;
+}

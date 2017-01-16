@@ -5,7 +5,7 @@ class TaskOrders extends Component {
   render() {
     return (
 			<main className="taskOrders">	
-				<div className="main__container">
+				<div className="taskOrders__container">
 					<h1 className="taskOrders__heading--main">TASK ORDERS</h1>
 					<ul className="taskOrders__list">
 						<li>

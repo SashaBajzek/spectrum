@@ -3,8 +3,7 @@
 
 .footer {
 	background-color: $blackgrey;
-	bottom: 0;
-	position: absolute;
+	flex-shrink: 0;
 	width: 100%;
 }
 
@@ -114,6 +113,9 @@
 		text-align: center;
 	}	
 }
+
+
+/* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
 	.footer__container--dark {

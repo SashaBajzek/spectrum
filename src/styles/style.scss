@@ -1,13 +1,12 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-
 * {
 	box-sizing: border-box;
 }
 
 html {
-	min-height: 100%;
+	height: 100%;
 	position: relative;
 }
 
@@ -15,7 +14,18 @@ body {
 	background-color: $white;
 	font-family: 'Muli', 'Helvetica', sans-serif;
 	font-size: $normal-font-size;
+	height: 100%;
 	margin: 0 auto;
+}
+
+#root {
+	height: 100vh;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 
 ul {
@@ -28,35 +38,4 @@ a {
 
 main {
 	background-color: $white;
-}
-
-
-
-
-
-.main__container {
-	margin: $headerHeight--mobile auto 0;
-	max-width: $screen-xs-min - 50px;
-}
-
-
-
-
-@media (min-width: $screen-sm-min) {
-	.main__container {
-		margin: 0 auto;
-		max-width: $screen-sm-min - 50px;
-	}
-}
-
-@media (min-width: $screen-md-min) {
-	.main__container {
-		max-width: $screen-md-min - 50px;
-	}
-}
-
-@media (min-width: $screen-lg-min) {
-	.main__container {
-		max-width: $screen-md-min;
-	}
 }

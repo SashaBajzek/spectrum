@@ -6,7 +6,7 @@ class ContactUs extends Component {
   render() {
     return (
 			<main className="contactUs">
-				<div className="main__container">
+				<div className="contactUs__container">
 					<h1>CONTACT US</h1>
 					<h2>Location</h2>
 					<div className="googleMap contactUs__googleMap">

@@ -2,12 +2,25 @@
 @import './mixins.scss';
 
 .aboutUs {
+	flex: 1 0 auto;
 	margin-top: $headerHeight--mobile;
-	padding-bottom: $footerHeightTotal--mobile + 25px;
+	padding-bottom: 25px;
+}
+
+.aboutUs__container {
+	margin: 0 auto;
+	max-width: $screen-sm-min - 100px;
+	padding: 0 25px;
+	position: relative;
+}
+
+.aboutUs__shadow {
+	@include main-box-shadow;
+	padding-top: 65px;
 }
 
 .aboutUs__heroImg {
-	background: $main__background--grey url(../../public/./VirginiaClassUnderway.jpg) 50% no-repeat;
+	background: $main__background--grey url(../../public/./VirginiaUnderway-about-sm.jpg) 50% no-repeat;
 	background-size: cover;
 	height: 200px;
 	margin: 0;
@@ -69,29 +82,16 @@
 }
 
 
+/* Media Sizes */
 
-
-.aboutUs__shadow {
-	@include main-box-shadow;
-	padding-top: 65px;
-}
-
-.aboutUs__container {
-	margin: 0 auto;
-	max-width: $screen-sm-min - 100px;
-	padding: 0 25px;
-	position: relative;
-}
-
-/* Tablet Screen Size */
 
 @media (min-width: $screen-sm-min) {
 	.aboutUs {
 		margin-top: 0;
-		padding-bottom: $footerHeightTotal + 25px;
 	}
 	
 	.aboutUs__heroImg {
+		background-image: url(../../public/./VirginiaUnderway-about-lg.jpg);
 		height: 300px;
 	}
 	
@@ -149,8 +149,6 @@
 		padding-left: 30px;
 		width: 150px;
 	}
-	
-
 }
 
 @media (min-width: $screen-lg-min) {

@@ -37,10 +37,12 @@
   }
 }
 
+
+/* Media Sizes */
+
 @media (min-width: $screen-sm-min) {
 	.googleMap {
 		height: 300px;
 		width: 300px;
 	}
-	
 }
