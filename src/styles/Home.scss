@@ -11,19 +11,19 @@
 	background-image: url(../../public/./VirginiaApproach-home-sm.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 200px;
+	height: 300px;
 }
 
 .home__heroText {
 	align-items: center;
-	background-color: $main__background--blackgrey;
+	background-color: transparent;
 	color: $white;
 	display: flex;
 	font-family: 'Muli', sans-serif;
 	font-size: $large-hero-font-size;
 	font-weight: 700;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 0 auto 0;
 	max-width: $screen-sm-min - 50px;
 	padding: 5px 0;
 	text-align: center;
@@ -38,17 +38,17 @@
 	padding-top: 25px;
 }
 
-.home__container--lightgrey {
-	background-color: $main__background--grey;
-	box-shadow: 0 2px 10px $main__boxShadow--grey;
+.home__container {
 	margin: 0 auto;
 	max-width: $screen-sm-min - 200px;
 }
 
 .home {
 	p {
+		font-size: $large-font-size;
 		margin: 0;
 		padding: 20px 25px 0;
+		text-align: justify;
 	}
 	
 	p:first-child {
@@ -58,6 +58,15 @@
 	p:last-child {
 		padding-bottom: 25px;
 	}
+}
+
+.home__logos {
+	display: flex;
+}
+
+.home__logo--SBA, .home__logo--Seaport {
+	height: 60px;
+	margin: 25px auto;
 }
 
 
@@ -83,16 +92,22 @@
 	
 	.home__heroImg {
 		background-image: url(../../public/./VirginiaApproach-home-lg.jpg);
-		height: 400px;
+		height: 500px;
 	}
 	
 	.home__heroText {
+		background-color: transparent;
 		justify-content: center;
+		margin: -98px auto 0;
 		max-width: $screen-sm-min - 50px;
 		padding: 31px 0;
 	}
+
+	.home__background--blackgrey {
+		background-color: $blackgrey-transparent;
+	}
 	
-	.home__container--lightgrey {
+	.home__container {
 		max-width: $screen-sm-min - 200px;
 	}
 }
@@ -102,7 +117,7 @@
 		max-width: $screen-md-min - 50px;
 	}
 	
-	.home .home__container--lightgrey {
+	.home .home__container {
 		max-width: $screen-md-min - 200px;
 	}
 }
@@ -112,7 +127,13 @@
 		max-width: $screen-md-min;
 	}
 	
-	.home__container--lightgrey {
+	.home__container {
 		max-width: $screen-md-min - 200px;
+	}
+}
+
+@media (min-width: $screen-xl-min) {
+	.home__heroImg {
+		height: 700px;
 	}
 }

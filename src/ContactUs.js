@@ -8,7 +8,7 @@ class ContactUs extends Component {
 			<main className="contactUs">
 				<div className="contactUs__container">
 					<h1>CONTACT US</h1>
-					<h2>Location</h2>
+					<h2>Headquarters</h2>
 					<div className="googleMap contactUs__googleMap">
 						<SimpleMap lat={39.140926} lng={-77.193975} />
 					</div>
@@ -24,8 +24,9 @@ class ContactUs extends Component {
 					<p>(301) 947-4628 (fax)</p>
 
 					<h2>E-Mail</h2>
-					<p>Dennis Leland, President</p>
-					<p>dennis.leland@spectrumtechnology.us</p>
+					<a className="contact__email" href="mailto:info@spectrumtechnology.us">info@spectrumtechnology.us</a>
+					
+					<div className="contactUs__map"></div>
 				</div>
 			</main>
     );

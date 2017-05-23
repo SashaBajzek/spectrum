@@ -4,7 +4,9 @@
 
 $black: #0e1112;
 $blue: #3569a4;
+$blue-transparent: rgba(53, 105, 164, 0.92);
 $gold: #CCAC55;
+$gold-transparent: rgba(204, 172, 85, 0.92);
 $white: #fff;
 
 /*grey from lightest to darkest*/
@@ -14,6 +16,7 @@ $textgrey: #666;
 $meddarkgrey: #505050;
 $mediumdarkgrey: #3a3a3a;
 $blackgrey: #181c1f;
+$blackgrey-transparent: rgba(24, 28, 31, .92);
 
 
 /* Header Colors */
@@ -49,6 +52,7 @@ $footer__copyright--textGrey: $textgrey;
 
 $large-hero-font-size: 30px;
 $large-header-font-size: 25px;
+$large-font-size: 18px;
 $normal-font-size: 14px;
 $small-font-size: 12px;
 $smallest-font-size: 11px;
@@ -62,7 +66,7 @@ $screen-xs-min: 480px;  /* Extra small screen / phone */
 $screen-sm-min: 768px;  /* Small screen / tablet */
 $screen-md-min: 992px;  /* Medium screen / desktop */
 $screen-lg-min: 1200px; /* Large screen / wide desktop */
-
+$screen-xl-min: 1920px; /* Large screen / wide desktop */
 
 
 /*

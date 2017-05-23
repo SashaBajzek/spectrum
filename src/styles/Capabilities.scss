@@ -2,7 +2,7 @@
 @import './mixins.scss';
 
 .capabilities {
-	flex: 1 0 auto;
+	margin: 1 0 auto;
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
@@ -18,8 +18,9 @@
 
 .capabilities__list {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 	padding: 0;
 }
 
@@ -54,6 +55,10 @@
 @media (min-width: $screen-md-min) {
 	.capabilities__container {
 		max-width: $screen-md-min - 50px;
+	}
+	
+	.capabilities__list {
+		flex-direction: row;
 	}
 }
 

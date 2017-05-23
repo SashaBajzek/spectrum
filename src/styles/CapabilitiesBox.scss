@@ -2,45 +2,154 @@
 @import './mixins.scss';
 
 .capabilitiesBox {
+	height: 50px;
+	margin: 0 auto 10px;
+	width: 70%;
+	z-index: 1;
+}
+
+.capabilities__link {
+	align-items: flex-end;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
-	margin-bottom: 25px;
-	padding: 24px;
-	width: 310px;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.capabilities__link:hover .capabilitiesBox__background,
+.capabilities__link:focus .capabilitiesBox__background,
+.capability__navItem--active .capabilitiesBox__background {
+	filter: none;
+}
+
+.capabilities__link:hover .capabilitiesBox__heading-container,
+.capabilities__link:focus .capabilitiesBox__heading-container,
+.capability__navItem--active .capabilitiesBox__heading-container {
+	background-color: $gold-transparent;
+}
+
+.capabilities__link:hover .capabilitiesBox__heading,
+.capabilities__link:focus .capabilitiesBox__heading,
+.capability__navItem--active .capabilitiesBox__heading {
+	color: $blackgrey;
 }
 
 .capabilitiesBox__background {
-	height: 116px;
-	width: 262px;
+	bottom: 0;
+	filter: grayscale(100%);
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
 }
 
-.capabilitiesBox__background--VirginiaClassUnderway {
-	background: $main__background--grey url(../../public/./VictoriaSub-capabilities.jpg) 50% no-repeat;
-	background-size: cover;
-}
 
-.capabilitiesBox__background--CanadianVictoriaClassSubmarine {
-	background: $main__background--grey url(../../public/./VictoriaSub-capabilities.jpg) 50% no-repeat;
-	background-size: cover;
-}
-
-.capabilitiesBox__background--seawolfUnderway {
-	background: $main__background--grey url(../../public/./Seawolf-capabilties.jpg) 50% no-repeat;
-	background-size: cover;
-}
-
-.capabilitiesBox__background--VirginiaClassApproaching {
-	background: $main__background--grey url(../../public/./VirginiaApproach-capabilities.jpg) 50% no-repeat;
-	background-size: cover;
+.capabilitiesBox__heading-container {
+	background-color: $blue-transparent;
+	margin: 0;
+	width: 100%;
+	z-index: 2; /*get text in front of image*/
 }
 
 .capabilitiesBox__heading {
-	color: #3a3a3a;
+	color: $white;
 	font-size: 18px;
 	font-weight: bold;
-	margin-bottom: 10px;
+	line-height: 50px;
+	margin: 0 auto;
+	text-align: center;
 	text-transform: uppercase;
 }
 
-.capabilitiesBox__description {
-	margin: 0;
+
+
+.capabilitiesBox__background--engineering {
+	background: $main__background--grey url(../../public/./engineeringAndDesign_placeholder.png) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--fleet {
+	background: $main__background--grey url(../../public/./fleetTechnicalSupport_placeholder.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--acoustics {
+	background: $main__background--grey url(../../public/./acoustics_placeholder.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--materials {
+	background: $main__background--grey url(../../public/./materialsResearch_placeholder.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+.capabilitiesBox__background--energy {
+	background: $main__background--grey url(../../public/./energyResearch_placeholder.jpg) 50% no-repeat;
+	background-size: cover;
+}
+
+
+
+
+@media (min-width: $screen-md-min) {
+	.capabilitiesBox {
+		height: 200px;
+		margin: 0 2px 25px;
+		transform: skew(-20deg);
+		width: 19.5%;
+		z-index: 1;
+	}
+
+	.capabilities__link {
+		align-items: flex-end;
+		display: flex;
+		height: 200px;
+		justify-content: center;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.capabilities__link:hover,
+	.capabilities__link:focus,
+	.capability__navItem--active {
+		transform: translateY(5px);
+	}
+
+	.capabilitiesBox__background {
+		bottom: 0;
+		left: -40px;
+		position: absolute;
+		right: -40px;
+		top: 0;
+		transform: skew(20deg);
+		z-index: 1;
+	}
+	
+	.capabilitiesBox__heading-container {		
+		align-items: center;
+		background-color: $blue-transparent;
+		display: flex;
+		height: 50px;
+		justify-content: center;
+		text-align: center;
+		z-index: 2; /*get text in front of image*/
+	}
+	
+	.capabilitiesBox__heading {
+		color: $white;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 25px;
+		text-align: center;
+		text-transform: uppercase;
+		transform: skew(20deg);
+	}
+	
 }

@@ -17,17 +17,8 @@ class Footer extends Component {
 							<ul className="footer__list">
 								<NavTab classBlock="footer-nav" navLink="/about-us" content="ABOUT SPECTRUM" />
 								<NavTab classBlock="footer-nav" navLink="/capabilities" content="CAPABILITIES" />
-								<NavTab classBlock="footer-nav" navLink="/quality-assurance" content="QUALITY ASSURANCE" />
 								<NavTab classBlock="footer-nav" navLink="/contact-us" content="CONTACT US" />
 							 </ul>
-						</div>
-						<div className="footer__column">
-							<h3 className="column__header">CONTRACT VEHICLE</h3>
-							<ul className="footer__list">
-								<NavTab classBlock="footer-nav" navLink="/contract-vehicles/contracts" content="CONTRACTS" />
-								<NavTab classBlock="footer-nav" navLink="/contract-vehicles/task-orders" content="TASK ORDERS" />
-								<NavTab classBlock="footer-nav" navLink="/contract-vehicles/team-members" content="TEAM MEMBERS" />
-							</ul>
 						</div>
 						<div className="footer__column">
 							<h3 className="column__header">EMPLOYEE TOOLS</h3>
@@ -38,7 +29,7 @@ class Footer extends Component {
 							</ul>
 						</div>
 						<div className="footer__column">
-							<h2 className="footer__logo"><Link to="/SpectrumTechnologyGroup/" className="footer-nav__link">STG, INC.</Link></h2>
+							<h2 className="footer__logo"><Link to="/spectrum-technology-group/" className="footer-nav__link">STG, INC.</Link></h2>
 							<div className="footer__address">
 								12 South Summit Avenue<br />
 								Suite 210<br />

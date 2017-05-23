@@ -175,9 +175,19 @@
 }
 
 	
-/* Contact Nav */
+/* Tools Nav */
 
-.header-nav-contact__link {
+.header__heading--tools {
+	color: $header__nav--textGrey;
+	font-size: $normal-font-size;
+	margin: 0;
+}
+
+.header__navGroup--tools {
+	border-top: 1px dashed $header__nav--textGrey;
+}
+
+.header-nav-tools__link {
 	color: $header__nav--textGrey;
 	display: block;
 	font-size: $normal-font-size;
@@ -187,19 +197,19 @@
 	text-transform: uppercase;	
 }
 
-.header-nav-contact__link:hover {
-	 .header-nav-contact__underline {
+.header-nav-tools__link:hover {
+	 .header-nav-tools__underline {
 		border-bottom: solid $header__nav--textGrey 2px;
 		transition: border-bottom .2s ease;
 	}
 }
 
-.header-nav-contact__underline {
+.header-nav-tools__underline {
 	border-bottom: solid transparent 2px;
 	flex-shrink: 0;
 }
 
-.header-nav-contact__link--tools {
+.header-nav-tools__link--tools {
 	background-color: $header__background--black;
 	border: 2px solid $header__background--black;
 	border-radius: 16px;
@@ -209,19 +219,19 @@
 	padding: 4px 12px;
 }
 
-.header-nav-contact__link--tools:hover {
+.header-nav-tools__link--tools:hover {
 	padding-bottom: 15px;  /*undo typical padding change on hover*/
 	border: 2px solid $header__nav--textGrey;
 	box-shadow: inset 0 0 5px 1px $header__nav--textGrey;
 	transition: all .2s ease;
 }
 
-.header-nav-contact__tools--active {
+.header-nav-tools__tools--active {
 	border: 2px solid $header__nav--textGrey;
 	box-shadow: inset 0 0 5px 1px $header__nav--textGrey;
 }
 
-.header-nav-contact__navItem--active {
+.header-nav-tools__navItem--active {
 	color: $gold;
 }
 
@@ -313,7 +323,7 @@
 		position: static;
 	}
 	
-	.header-nav-contact__link {
+	.header-nav-tools__link {
 		color: $header__nav--textGrey;
 		font-size: $small-font-size;
 		font-weight: bold;
@@ -342,7 +352,6 @@
 	.header__list {
 		display: flex;
 		justify-content: flex-start;
-		padding: 0;
 	}
 	
 	.header-nav__link--tools {
@@ -385,6 +394,17 @@
 	.header-nav-main__navItem--contract-active ~ ul,
 	.header-nav-main__navItem--services-active ~ ul {
 		display: none;
+	}
+	
+	.header__heading--tools {
+		color: $header__nav--textGrey;
+		font-size: $normal-font-size;
+		margin: 0;
+	}
+
+	.header__navGroup--tools {
+		border-left: 1px dashed $header__nav--textGrey;
+		border-top: none;
 	}
 	
 }

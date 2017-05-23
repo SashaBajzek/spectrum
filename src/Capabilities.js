@@ -9,28 +9,13 @@ class Capabilities extends Component {
 				<div className="capabilities__container">
 					<h1 className="capabilities__heading">CAPABILITIES:</h1>
 					<ul className="capabilities__list">
-						<CapabilitiesBox heading="Program Management" backgroundImg="VirginiaClassApproaching" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Mechanical Engineering and Design" backgroundImg="CanadianVictoriaClassSubmarine" description="Keep in mind that two lined titles have less space.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Modeling and Simulation" backgroundImg="seawolfUnderway" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Research, Development, Test and Evaluation" backgroundImg="VirginiaClassUnderway" description="Keep in mind that two lined titles have less space.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Fleet Support" backgroundImg="VirginiaClassApproaching" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Network Engineering" backgroundImg="CanadianVictoriaClassSubmarine" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Acoustical Engineering" backgroundImg="seawolfUnderway" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Technology Assessment" backgroundImg="VirginiaClassUnderway" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Information Assurance" backgroundImg="VirginiaClassApproaching" description="Short description of our capabilities and what we excel at doing.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="System Design Documentation" backgroundImg="CanadianVictoriaClassSubmarine" description="Keep in mind that two lined titles have less space.  Keeping it short and to the point or I can set these boxes up bigger." />
-						<CapabilitiesBox heading="Technical Data Support" backgroundImg="seawolfUnderway" description="Hire us to do awesome work" />	
-						<CapabilitiesBox heading="Software Development" backgroundImg="VirginiaClassUnderway" description="Hire us to do awesome work" />
-						<CapabilitiesBox heading="Database Management" backgroundImg="VirginiaClassApproaching" description="Hire us to do awesome work" />
+						<CapabilitiesBox heading="Engineering and Design" backgroundImg="engineering" capability="engineering"/>
+						<CapabilitiesBox heading="Fleet Technical Support" backgroundImg="fleet" capability="fleet" />
+						<CapabilitiesBox heading="Acoustics" backgroundImg="acoustics" capability="acoustics" />
+						<CapabilitiesBox heading="Materials Research" backgroundImg="materials" capability="materials" />
+						<CapabilitiesBox heading="Energy Research" backgroundImg="energy" capability="energy" />
 					</ul>
-					<h1 className="capabilities__heading">RESEARCH</h1>
-						<p className="capabilities__section">
-							Spectrum Technology Group, Inc. works closely with the Navy research and development efforts and as such has high quality research resources at its disposal as well as the knowledge and experience to back up those resources with a solid grounding in many areas of the sciences and engineering. Before any project can begin the background information is researched and explored to get a better understanding of what advancements have been made in the area of the project and what is needed to make the product work with the best results. Research is a very important part of the development process because it allows for the exploration into proven results and concepts as well as the discovery of new methods of solving problems that may have never been tried before. The in depth research in to new solutions to problems at Spectrum Technology allows for the innovative solutions, that we deliver every day.
-						</p>
-					<h1 className="capabilities__heading">SUPPORT</h1>
-						<p className="capabilities__section">
-							Spectrum Technology provides acoustical engineering support and test and evaluation services, primarily at present to the Signatures Department of the Naval Surface Warfare Center Carderock Division (NSWCCD) of the Naval Sea Systems Command (NAVSEA). Our efforts in these areas provide for evaluation of Signature components and Stealth features of naval vessels (foreign and domestic), including innovative conceptual ideas appropriate to development of new technologies and improvement to existing technologies.
-						</p>
+					{this.props.children}
 				</div>
 			</main>
     );
@@ -38,3 +23,30 @@ class Capabilities extends Component {
 }
 
 export default Capabilities;
+
+
+/*
+<li className="capabilitiesBox">
+	<div className={`capabilitiesBox__background capabilitiesBox__background--${this.props.backgroundImg}`}></div>
+	<h3 className="capabilitiesBox__heading">{this.props.heading}</h3>
+</li>
+
+
+<Link to={`/spectrum-technology-group${this.props.navLink}`} className={`${this.props.classBlock}__link`} activeClassName={`${this.props.classBlock}__navItem--active`} onClick={this.props.toggleHamburger}>
+		<span className={`${this.props.classBlock}__underline`}>{this.props.content}</span>
+</Link>
+
+<NavTab classBlock="team-nav" navLink="/contract-vehicles/team-members/mantech" content="MANTECH SYSTEMS ENGINEERING CORPORATION" />
+
+<Link to={`/spectrum-technology-group/capabilties${this.props.capability}`} activeClassName={`capability__navItem--active`}>
+	<div className={`capabilitiesBox__background capabilitiesBox__background--${this.props.backgroundImg}`}></div>
+	<h3 className="capabilitiesBox__heading">{this.props.heading}</h3>
+</Link>
+
+
+					<Route path="/spectrum-technology-group/capabilities/engineering" component={Engineering} />
+					<Route path="/spectrum-technology-group/capabilities/fleet" component={Fleet} />
+					<Route path="/spectrum-technology-group/capabilities/acoustics" component={Acoustics} />
+					<Route path="/spectrum-technology-group/capabilities/materials" component={Materials} />
+					<Route path="/spectrum-technology-group/capabilities/energy" component={Energy} />
+*/

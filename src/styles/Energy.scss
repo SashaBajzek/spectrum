@@ -1,0 +1,55 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.energy {
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
+}
+
+.energy__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
+}
+
+.energy__heroImg {
+	background-image: url(../../public/./energyResearch_placeholder.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+}
+
+.energy__content {
+
+}
+
+.energy__listItem {
+
+}
+
+
+
+/* Media Sizes */
+
+@media (min-width: $screen-sm-min) {
+	.energy__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
+	}
+	
+	.energy__heroImg {
+		background-image: url(../../public/./energyResearch_placeholder.jpg);
+		height: 400px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.energy__container {
+		max-width: $screen-md-min - 50px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.energy__container {
+		max-width: $screen-md-min;
+	}
+}

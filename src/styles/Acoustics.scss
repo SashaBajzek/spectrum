@@ -1,0 +1,67 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.acoustics {
+	flex: 1 0 auto;
+	padding: 25px 0 25px;
+}
+
+.acoustics__container {
+	margin: $headerHeight--mobile auto 0;
+	max-width: $screen-xs-min - 50px;
+}
+
+.acoustics__sonar {
+	background-image: url(../../public/./SonarArray-150px.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 150px;
+}
+
+.acoustics__rig {
+	background-image: url(../../public/./AcousticTestRig_CAD-150px.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 150px;
+}
+
+.acoustics__content {
+
+}
+
+.acoustics__listItem {
+
+}
+
+
+
+/* Media Sizes */
+
+@media (min-width: $screen-sm-min) {
+	.acoustics__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
+	}
+	
+	.acoustics__sonar {
+		background-image: url(../../public/./SonarArray-250px.png);
+		height: 250px;
+	}
+	
+	.acoustics__rig {
+		background-image: url(../../public/./AcousticTestRig_CAD-250px.png);
+		height: 250px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.acoustics__container {
+		max-width: $screen-md-min - 50px;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.acoustics__container {
+		max-width: $screen-md-min;
+	}
+}
