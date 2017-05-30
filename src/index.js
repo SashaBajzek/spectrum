@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { IndexRedirect, Router, Route, browserHistory, hashHistory } from 'react-router';
+import { IndexRedirect, Router, Route, browserHistory } from 'react-router';
 import App from './App';
 import Home from './Home';
 import AboutUs from './AboutUs';
@@ -15,17 +15,17 @@ import ContactUs from './ContactUs';
 ReactDOM.render(
 		<Router history={browserHistory} onUpdate={() => window.scrollTo(0, 0)}>
 			<Route component={App}>
-				<Route path="/spectrum-technology-group/" component={Home} />
-				<Route path="/spectrum-technology-group/about-us" component={AboutUs} />
-				<Route path="/spectrum-technology-group/capabilities" component={Capabilities} >
-					<IndexRedirect to="/spectrum-technology-group/capabilities/engineering" component={Engineering} />
-					<Route path="/spectrum-technology-group/capabilities/engineering" component={Engineering} />
-					<Route path="/spectrum-technology-group/capabilities/fleet" component={Fleet} />
-					<Route path="/spectrum-technology-group/capabilities/acoustics" component={Acoustics} />
-					<Route path="/spectrum-technology-group/capabilities/materials" component={Materials} />
-					<Route path="/spectrum-technology-group/capabilities/energy" component={Energy} />
+				<Route path="/" component={Home} />
+				<Route path="/about-us" component={AboutUs} />
+				<Route path="/capabilities" component={Capabilities} >
+					<IndexRedirect to="/capabilities/engineering" component={Engineering} />
+					<Route path="/capabilities/engineering" component={Engineering} />
+					<Route path="/capabilities/fleet" component={Fleet} />
+					<Route path="/capabilities/acoustics" component={Acoustics} />
+					<Route path="/capabilities/materials" component={Materials} />
+					<Route path="/capabilities/energy" component={Energy} />
 				</Route>
-				<Route path="/spectrum-technology-group/contact-us" component={ContactUs} />
+				<Route path="/contact-us" component={ContactUs} />
 				<Route path="*" component={Home} />
 			</Route>
 		</Router>,

@@ -1,69 +1,211 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.capabilities {
-	margin: 1 0 auto;
-	padding-top: 25px;
-	padding-bottom: 25px;
+.Capabilities {
+	padding: 25px 0;
+
+	&__container {
+		margin: $headerHeight--mobile auto 0;
+		max-width: $screen-xs-min - 50px;
+	}
+
+	&__heading {
+		text-align: center;
+	}
 }
 
-.capabilities__container {
-	margin: $headerHeight--mobile auto 0;
-	max-width: $screen-xs-min - 50px;
-}
+.Capabilities-menu {
+	
+	&__list {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding: 0;
+	}
 
-.capabilities__heading {
-	text-align: center;
-}
+	&__item {
+		height: 50px;
+		margin: 0 auto 10px;
+		width: 70%;
+		z-index: 1;
+	}
 
-.capabilities__list {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	padding: 0;
-}
+	&__link {
+		align-items: flex-end;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+		display: flex;
+		height: 50px;
+		justify-content: center;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		z-index: 1;
+	}
 
-.capabilities__section {
-	padding-left: 25px;
-	padding-right: 25px;
+	&__link:hover &__background,
+	&__link:focus &__background,
+	&__link--active &__background {
+		filter: none;
+	}
+
+	&__link:hover &__heading-container,
+	&__link:focus &__heading-container,
+	&__link--active &__heading-container {
+		background-color: $gold-transparent;
+	}
+
+	&__link:hover &__heading,
+	&__link:focus &__heading,
+	&__link--active &__heading {
+		color: $blackgrey;
+	}
+
+	&__background {
+		bottom: 0;
+		filter: grayscale(100%);
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&__background--engineering {
+		background: $main__background--grey url(../../public/./engineeringAndDesign_placeholder.png) 50% no-repeat;
+		background-size: cover;
+	}
+
+	&__background--fleet {
+		background: $main__background--grey url(../../public/./fleetTechnicalSupport_placeholder.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+
+	&__background--acoustics {
+		background: $main__background--grey url(../../public/./acoustics_placeholder.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+
+	&__background--materials {
+		background: $main__background--grey url(../../public/./materialsResearch_placeholder.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+
+	&__background--energy {
+		background: $main__background--grey url(../../public/./energyResearch_placeholder.jpg) 50% no-repeat;
+		background-size: cover;
+	}
+
+	&__heading-container {
+		background-color: $blue-transparent;
+		margin: 0;
+		width: 100%;
+		z-index: 2; /*get text in front of image*/
+	}
+
+	&__heading {
+		color: $white;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 50px;
+		margin: 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+	}
 }
 
 
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.capabilities__container {
-		margin: 0 auto;
-		max-width: $screen-sm-min - 50px;
-	}
 	
-	.capabilities__heading {
-		text-align: left;
+	.Capabilities {
+		&__container {
+			margin: 0 auto;
+			max-width: $screen-sm-min - 50px;
+		}
+
+		&__heading {
+			text-align: left;
+		}
+
+		&-menu__list {
+			justify-content: space-between;
+		}
 	}
-	
-	.capabilities__list {
-		justify-content: space-between;
-	}
-	
-	.capabilities__section {
-		padding: 0;
-	}
-	
 }
 
 @media (min-width: $screen-md-min) {
-	.capabilities__container {
+	.Capabilities__container {
 		max-width: $screen-md-min - 50px;
 	}
 	
-	.capabilities__list {
-		flex-direction: row;
+	
+	.Capabilities-menu {
+		
+		&__list {
+			flex-direction: row;
+		}
+		
+		&__item {
+			height: 200px;
+			margin: 0 2px 25px;
+			transform: skew(-20deg);
+			width: 19.5%;
+			z-index: 1;
+		}
+
+		&__link {
+			align-items: flex-end;
+			display: flex;
+			height: 200px;
+			justify-content: center;
+			overflow: hidden;
+			padding: 0;
+			position: relative;
+			z-index: 1;
+		}
+
+		&__link:hover,
+		&__link:focus,
+		&__link--active {
+			transform: translateY(5px);
+		}
+
+		&__background {
+			bottom: 0;
+			left: -40px;
+			position: absolute;
+			right: -40px;
+			top: 0;
+			transform: skew(20deg);
+			z-index: 1;
+		}
+
+		&__heading-container {		
+			align-items: center;
+			background-color: $blue-transparent;
+			display: flex;
+			height: 50px;
+			justify-content: center;
+			text-align: center;
+			z-index: 2; /*get text in front of image*/
+		}
+
+		&__heading {
+			color: $white;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 25px;
+			text-align: center;
+			text-transform: uppercase;
+			transform: skew(20deg);
+		}
 	}
 }
 
 @media (min-width: $screen-lg-min) {
-	.capabilities__container {
+	.Capabilities__container {
 		max-width: $screen-md-min;
 	}
 }

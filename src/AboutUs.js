@@ -4,11 +4,11 @@ import './styles/AboutUs.scss';
 class AboutUs extends Component {
   render() {
     return (
-			<main className="aboutUs">
-				<div className="aboutUs__heroImg"></div>
-				<div className="aboutUs__shadow">
-					<div className="aboutUs__container">
-						<div className="aboutUs__quickFacts">
+			<main className="AboutUs">
+				<div className="AboutUs__heroImg"></div>
+				<div className="AboutUs__shadow">
+					<div className="AboutUs__container">
+						<div className="AboutUs__quickFacts">
 							<h3 className="quickFacts__heading">QUICK FACTS ABOUT SPECTRUM:</h3>
 							<ul className="quickFacts__list">
 								<li className="quickFacts__item">

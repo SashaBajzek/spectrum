@@ -1,16 +1,61 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.header {
-	background-color: $header__background--blackGrey;
+.Header {
+	background-color: $blackgrey;
 	flex-shrink: 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 2;
+
+	&__nav {
+		background: $mediumdarkgrey;
+		bottom: 0;
+		font-family: 'Muli', sans-serif;
+		left: 0;
+		margin: 0;
+		position: fixed;
+		right: 0;
+		top: 40px;
+		transition: transform 1.5s ease;
+		transform: translateX(100%);
+	}
+
+	&__nav--menuOpen {
+		flex-direction: column;
+		justify-content: space-around;
+		transform: translateX(0);
+		transition: transform 1.5s ease;
+	}
+
+	&__container--dark {
+		background-color: $blackgrey;
+		color: $white;
+		margin: 0 auto;
+		max-width: $screen-sm-min - 50px;
+	}
+
+	&__logo {
+		@include image-replace;
+		background-image: url(../../public/STG_Logo_Clear-white+grey.svg);
+		flex-shrink: 0;
+		height: 30px;
+		margin: 5px auto;
+		width: 120px;
+	}
+
+	&__heading {
+		display: block;
+		font-size: $normal-font-size;
+		height: 100%;
+		text-transform: uppercase;
+		width: 100%;
+	}
 }
 
-.header__hamburger {
+
+.Header__hamburger {
 	background-color: $blackgrey;
 	display: block;
 	height: 17px;
@@ -20,413 +65,294 @@
 	right: 25px;
 	top: 11px;
 	width: 30px;
-}
 
-/* Hamburger Open X */
+	/* Hamburger Open X */
 
-.menuOpen.header__hamburger {
-	border: none;
-}
+	&--menuOpen {
+		border: none;
+	}
 
-.menuOpen.header__hamburger:before,
-.menuOpen.header__hamburger:after {
-	background: $mediumgrey;
-	content: "";
-	height: 3px;
-	left: 0px;
-	position: absolute;
-	top: 7px;
-	width: 100%;
-}
+	&--menuOpen:before,
+	&--menuOpen:after {
+		background: $mediumgrey;
+		content: "";
+		height: 3px;
+		left: 0px;
+		position: absolute;
+		top: 7px;
+		width: 100%;
+	}
 
-.menuOpen.header__hamburger:before {
-	transform: rotate(-45deg);
-	transition: transform 0.25s;
-}
+	&--menuOpen:before {
+		transform: rotate(-45deg);
+		transition: transform 0.25s;
+	}
 
-.menuOpen.header__hamburger:after {
-	transform: rotate(45deg);
-	transition: transform 0.25s;
-}
+	&--menuOpen:after {
+		transform: rotate(45deg);
+		transition: transform 0.25s;
+	}
 
-.menuOpen.header__hamburger:hover::before,
-.menuOpen.header__hamburger:hover::after {
-	background: $gold;
-	transition: transform 0.25s, background .5s;
-}
+	&--menuOpen:hover::before,
+	&--menuOpen:focus::before,
+	&--menuOpen:hover::after,
+	&--menuOpen:focus::after {
+		background: $gold;
+		transition: transform 0.25s, background .5s;
+	}
 
+	/* Hamburger Closed */
+	&--menuClosed {
+		border-bottom: 3px solid $mediumgrey;
+		border-left: none;
+		border-right: none;
+		border-top: 3px solid $mediumgrey;
+		transition: border-color .5s;
+	}
 
-/* Hamburger Closed */
-.menuClosed.header__hamburger {
-	border-bottom: 3px solid $mediumgrey;
-	border-left: none;
-	border-right: none;
-	border-top: 3px solid $mediumgrey;
-	transition: border-color .5s;
-}
+	&--menuClosed:before,
+	&--menuClosed:after {
+		background: $mediumgrey;
+		content: "";
+		height: 3px;
+		left: 0px;
+		position: absolute;
+		top: 4px;
+		transform: rotate(0);
+		transition: transform 0.25s, background .5s;
+		width: 100%;	
+	}
 
-.menuClosed.header__hamburger:before,
-.menuClosed.header__hamburger:after {
-	background: $mediumgrey;
-	content: "";
-	height: 3px;
-	left: 0px;
-	position: absolute;
-	top: 4px;
-	transform: rotate(0);
-	transition: transform 0.25s, background .5s;
-	width: 100%;	
-}
+	&--menuClosed:hover,
+	&--menuClosed:focus {
+		border-color: $gold;
+		transition: border-color .5s, background .5s;
+	}
 
-.menuClosed.header__hamburger:hover {
-	border-color: $gold;
-	transition: border-color .5s, background .5s;
-}
-
-.menuClosed.header__hamburger:hover::before,
-.menuClosed.header__hamburger:hover::after {
-	background: $gold;
-	transition: background .5s;
-}
-
-
-
-
-
-
-.header__nav {
-  background: $mediumdarkgrey;
-	bottom: 0;
-	font-family: 'Muli', sans-serif;
-	left: 0;
-  margin: 0;
-  position: fixed;
-	right: 0;
-	top: 40px;
-  transition: transform 1.5s ease;
-	transform: translateX(100%);
-	z-index: 2; /* use z-index to get in front of the quick facts box */
-}
-
-.menuOpen .header__nav {
-  flex-direction: column;
-  justify-content: space-around;
-  transform: translateX(0);
-	transition: transform 1.5s ease;
-}
-
-
-.header__container--dark {
-	background-color: $header__background--blackGrey;
-	color: $white;
-	margin: 0 auto;
-	max-width: $screen-sm-min - 50px;
-}
-
-.header__logo {
-	@include image-replace;
-	background-image: url(../../public/STG_Logo_Clear-white+grey.svg);
-	flex-shrink: 0;
-	height: 30px;
-	margin: 5px auto;
-	width: 120px;
-}
-
-.header__home {
-	display: block;
-	font-size: $normal-font-size;
-	height: 100%;
-	text-transform: uppercase;
-	width: 100%;
-}
-
-.header__list {
-	padding: 0;
+	&--menuClosed:hover::before,
+	&--menuClosed:focus::before,
+	&--menuClosed:hover::after,
+	&--menuClosed:focus::after {
+		background: $gold;
+		transition: background .5s;
+	}
 }
 
 
 /* Main Nav */		
 
-.header-nav-main__link {
-	color: $white;
-	display: block;
-	font-size: $normal-font-size;
-	padding: 15px 9px;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.header-nav-main__underline {
-	border-bottom: solid transparent 2px;
-	flex-shrink: 0;
-}
-
-.header-nav-main__link:hover {
-	.header-nav-main__underline {
-		border-bottom: solid $header__nav--activeGold 2px;
-		transition: border-bottom .2s ease;
+.Header-nav-main {
+	padding: 0;
+	
+	&__link {
+		color: $white;
+		display: block;
+		font-size: $normal-font-size;
+		padding: 15px 9px;
+		text-align: center;
+		text-transform: uppercase;
 	}
-}
 
 
-.header-nav-main__navItem--active {
-	background-color: $meddarkgrey;
-	color: $gold;
+
+	&__link:hover,
+	&__link:focus {
+		.Header-nav-main__underline {
+			border-bottom: solid $gold 2px;
+			transition: border-bottom .2s ease;
+		}
+	}
+	
+	&__underline {
+		border-bottom: solid transparent 2px;
+		flex-shrink: 0;
+		}
+
+	&__navItem--active {
+		background-color: $meddarkgrey;
+		color: $gold;
+	}
+	
 }
 
 	
 /* Tools Nav */
 
-.header__heading--tools {
-	color: $header__nav--textGrey;
-	font-size: $normal-font-size;
-	margin: 0;
-}
-
-.header__navGroup--tools {
-	border-top: 1px dashed $header__nav--textGrey;
-}
-
-.header-nav-tools__link {
-	color: $header__nav--textGrey;
-	display: block;
-	font-size: $normal-font-size;
-	line-height: 18px;
-	padding: 15px 8px;
-	text-align: center;
-	text-transform: uppercase;	
-}
-
-.header-nav-tools__link:hover {
-	 .header-nav-tools__underline {
-		border-bottom: solid $header__nav--textGrey 2px;
-		transition: border-bottom .2s ease;
-	}
-}
-
-.header-nav-tools__underline {
-	border-bottom: solid transparent 2px;
-	flex-shrink: 0;
-}
-
-.header-nav-tools__link--tools {
-	background-color: $header__background--black;
-	border: 2px solid $header__background--black;
-	border-radius: 16px;
-	display: block;
-	height: 27px;
-	margin: 10px 0 10px;
-	padding: 4px 12px;
-}
-
-.header-nav-tools__link--tools:hover {
-	padding-bottom: 15px;  /*undo typical padding change on hover*/
-	border: 2px solid $header__nav--textGrey;
-	box-shadow: inset 0 0 5px 1px $header__nav--textGrey;
-	transition: all .2s ease;
-}
-
-.header-nav-tools__tools--active {
-	border: 2px solid $header__nav--textGrey;
-	box-shadow: inset 0 0 5px 1px $header__nav--textGrey;
-}
-
-.header-nav-tools__navItem--active {
-	color: $gold;
-}
-
-
-
-
-
-/* Mobile Only Rules*/
-
-
-.contract-vehicles-nav__list--mobile-only,
-.services-nav__list--mobile-only {
-	background-color: $textgrey;
-	display: none;
-}
-
-.header-nav-main__navItem--contract-active ~ ul,
-.header-nav-main__navItem--services-active ~ ul {
-	display: block;
-}
-
-.contract-vehicles-nav__list--mobile-only,
-.services-nav__list--mobile-only {
-	color: $white;
+.Header-nav-tools {
+	background-color: $blackgrey;
 	margin: 0 auto;
-	padding: 0;
-	text-align: center;
+	width: 100%;
 	
+	&__heading {
+		border-bottom: 1px solid #454545;
+		background-color: $blackgrey;
+		color: $mediumgrey;
+		font-size: $normal-font-size;
+		margin: 0;
+		padding-bottom: 2px;
+		padding-top: 10px;
+		text-align: center;
+	}
 	
-	.secondary-nav-mobile__link {
-		color: $white;
+	&__list {
+		padding: 0;
+	}
+
+	&__link {
+		color: $mediumgrey;
 		display: block;
-		padding: 7px 0;
+		font-size: $normal-font-size;
+		line-height: 18px;
+		padding: 15px 8px;
+		text-align: center;
+		text-transform: uppercase;	
+	}
+
+	&__link:hover,
+	&__link:focus {
+	 .Header-nav-tools__underline {
+			border-bottom: solid $mediumgrey 2px;
+			transition: border-bottom .2s ease;
+		}
+	}
+
+	&__underline {
+		border-bottom: solid transparent 2px;
+		flex-shrink: 0;
 	}
 }
 
-.secondary-nav-mobile__underline {
-	border-bottom: solid transparent 2px;
-	flex-shrink: 0;
-}
 
-.secondary-nav-mobile__link:hover {
-	.secondary-nav-mobile__underline {
-		border-bottom: solid $header__nav--activeGold 2px;
-		transition: border-bottom .2s ease;
-	}
-}
 
 
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
 	
-	.header {
+	.Header {
 		position: static;
-	}
-	
-	.header__hamburger {
-		display: none;
-	}
-	
-	/* Why is header__nav getting overridden by the mobile version??? Maybe because mobile is more specific?  More specific is more priority*/
-	
-	.menuOpen .header__nav,
-	.menuClosed .header__nav {
-		display: flex;
-	}
+		
+		&.menuOpen {
+			position: static;
+			width: 100%;
+			z-index: 0;
+		}
+		
+		&__hamburger {
+			display: none;
+		}
 
-	.header__container--dark {
-		display: flex;
-		height: 75px;
-		justify-content: space-between;
-		margin: 0 auto;
-		max-width: $screen-sm-min - 50px;
+		&__container--dark {
+			display: flex;
+			height: 75px;
+			justify-content: space-between;
+			margin: 0 auto;
+			max-width: $screen-sm-min - 50px;
+		}
+
+		&__logo {
+			height: 30px;
+			margin: auto 10px auto 0;
+			width: 120px;
+		}
 	}
 	
-	.header__logo {
-		height: 30px;
-		margin: auto 10px auto 0;
-		width: 120px;
-	}
 	
-	.header__nav {
+	.Header__nav {
 		background: $blackgrey;
 		display: flex;
 		flex-direction: row;
 		flex-grow: 1;
 		justify-content: space-between;
 		position: static;
+		
+		&--menuOpen,
+		&--menuClosed {
+			display: flex;
+		}
+		
+		&--menuClosed {
+			background: $blackgrey;
+			transform: none;
+			position: static;
+			transition: none;
+		}
+		
+		&--menuOpen {
+			flex-direction: row;
+			justify-content: space-between;
+			transform: none;
+			transition: none;
+		}
 	}
 	
-	.header-nav-tools__link {
-		color: $header__nav--textGrey;
-		font-size: $small-font-size;
-		font-weight: bold;
-	}
 	
-	.menuClosed .header__nav {
-		background: $blackgrey;
-		transform: none;
-		position: static;
-		transition: none;
-	}
-
-	.menuOpen .header__nav {
-		flex-direction: row;
-		justify-content: space-between;
-		transform: none;
-		transition: none;
-	}
-	
-	.header.menuOpen {
-		position: static;
-		width: 100%;
-		z-index: 0;
-	}
-	
-	.header__list {
+	.Header-nav-main {
 		display: flex;
 		justify-content: flex-start;
+		margin: auto 0;
+		
+		&__navItem--active {
+			background-color: $blackgrey;
+		}
 	}
 	
-	.header-nav__link--tools {
-		display: inline-block;
+	.Header-nav-tools {
+		height: 80%;
+		margin: auto 0;
+		width: auto;
+		
+		&__list {
+			display: flex;
+			justify-content: flex-start;
+			margin: 0;
+			padding: 0;
+		}
+		
+		&__heading {
+			color: $mediumgrey;
+			font-size: 11px;
+			margin: 0 auto;
+			padding-top: 0;
+			text-align: center;
+		}
+		
+		&__link {
+			color: $mediumgrey;
+			font-size: $small-font-size;
+			font-weight: bold;
+		}
 	}
 	
-	.header-nav-main__navItem--active {
-		background-color: $blackgrey;
-	}
-	
-	.triangle__secondaryNav--active {
-		position: relative;
-	}
 
-	.triangle__secondaryNav--active:after {
-		content: "";
-		display: block;
-		border-left: 6px solid transparent;
-		border-right: 6px solid transparent;
-		border-bottom: 6px solid $gold;
-		position: absolute;
-		left: calc(50% - 6px);
-		height: 0;
-		top: 55px;
-		width: 0;
-	}
 	
-	.header-nav-main__navItem--non-mobile-only {
-		display: block;
-	}
-	
-	.contract-vehicles-nav__list--mobile {
-		display: none;
-	}
-	
-	.header-nav-main__navItem--mobile-only {
-		display: none;
-	}
-	
-	.header-nav-main__navItem--contract-active ~ ul,
-	.header-nav-main__navItem--services-active ~ ul {
-		display: none;
-	}
-	
-	.header__heading--tools {
-		color: $header__nav--textGrey;
-		font-size: $normal-font-size;
-		margin: 0;
-	}
-
-	.header__navGroup--tools {
-		border-left: 1px dashed $header__nav--textGrey;
-		border-top: none;
-	}
 	
 }
 
 /* Desktop Screen Size */
 
 @media (min-width: $screen-md-min) {
-	.header__container--dark {
-		max-width: $screen-md-min - 50px;
-	}
-	
-	.header__logo {
-		height: 37px;
-		margin: auto 20px auto 0;
-		width: 160px;
+	.Header {
+		&__container--dark {
+			max-width: $screen-md-min - 50px;
+		}
+
+		&__logo {
+			height: 37px;
+			margin: auto 20px auto 0;
+			width: 160px;
+		}
+
+		&-nav-main {
+			margin: 14px 0;
+		}
 	}
 }
 
 /* XL Desktop Screen Size */
 
 @media (min-width: $screen-lg-min) {
-	.header__container--dark {
+	.Header__container--dark {
 		max-width: $screen-md-min;
 	}
 }

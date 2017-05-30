@@ -2,7 +2,7 @@
 @import './mixins.scss';
 
 
-.googleMap {
+.GoogleMap {
 	flex-shrink: 0;
 	height: 200px;
 	width: 200px;
@@ -41,7 +41,7 @@
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.googleMap {
+	.GoogleMap {
 		height: 300px;
 		width: 300px;
 	}

@@ -1,79 +1,97 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.home {
+.Home {
 	flex: 1 0 auto;
 	margin-top: $headerHeight--mobile;
 	padding-bottom: 25px;
-}
 
-.home__heroImg {
-	background-image: url(../../public/./VirginiaApproach-home-sm.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 300px;
-}
+	&__heroImg {
+		background-image: url(../../public/./VirginiaApproach-home-sm.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 300px;
+	}
 
-.home__heroText {
-	align-items: center;
-	background-color: transparent;
-	color: $white;
-	display: flex;
-	font-family: 'Muli', sans-serif;
-	font-size: $large-hero-font-size;
-	font-weight: 700;
-	justify-content: center;
-	margin: 0 auto 0;
-	max-width: $screen-sm-min - 50px;
-	padding: 5px 0;
-	text-align: center;
-}
+	&__heroText {
+		align-items: center;
+		background-color: transparent;
+		color: $white;
+		display: flex;
+		font-family: 'Muli', sans-serif;
+		font-size: $large-hero-font-size;
+		font-weight: 700;
+		justify-content: center;
+		margin: 0 auto 0;
+		max-width: $screen-sm-min - 50px;
+		padding: 5px 0;
+		text-align: center;
+	}
 
-.home__background--blackgrey {
-	background-color: $blackgrey;
-}
+	&__background--blackgrey {
+		background-color: $blackgrey;
+	}
 
-.home__shadow {
-	@include main-box-shadow;
-	padding-top: 25px;
-}
+	&__shadow {
+		@include main-box-shadow;
+		padding-top: 25px;
+	}
 
-.home__container {
-	margin: 0 auto;
-	max-width: $screen-sm-min - 200px;
-}
+	&__container {
+		margin: 0 auto;
+		max-width: $screen-sm-min - 200px;
+	}
 
-.home {
 	p {
 		font-size: $large-font-size;
 		margin: 0;
 		padding: 20px 25px 0;
 		text-align: justify;
 	}
-	
+
 	p:first-child {
 		padding-top: 25px;
 	}
-	
+
 	p:last-child {
 		padding-bottom: 25px;
 	}
-}
 
-.home__logos {
-	display: flex;
-}
+	&__logos {
+		display: flex;
+	}
 
-.home__logo--SBA, .home__logo--Seaport {
-	height: 60px;
-	margin: 25px auto;
+	&__logo--SBA, &__logo--Seaport {
+		height: 60px;
+		margin: 25px auto;
+	}
+	
+	&__links {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	&__link {
+		border: 1px solid black;
+		color: $blackgrey;
+		display: block;
+		font-family: 'Muli', sans-serif;
+		font-size: $large-font-size;
+		margin: 20px auto;
+		padding: 10px;
+	}
+	
+	&__link:hover,
+	&__link:focus {
+		background-color: $gold;
+	}
 }
 
 
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.home {
+	.Home {
 		margin-top: 0;
 		
 		p {
@@ -87,53 +105,56 @@
 		p:last-child {
 			padding-bottom: 45px;
 		}
-		
-	}
 	
-	.home__heroImg {
-		background-image: url(../../public/./VirginiaApproach-home-lg.jpg);
-		height: 500px;
-	}
-	
-	.home__heroText {
-		background-color: transparent;
-		justify-content: center;
-		margin: -98px auto 0;
-		max-width: $screen-sm-min - 50px;
-		padding: 31px 0;
-	}
+		&__heroImg {
+			background-image: url(../../public/./VirginiaApproach-home-lg.jpg);
+			height: 500px;
+		}
 
-	.home__background--blackgrey {
-		background-color: $blackgrey-transparent;
-	}
-	
-	.home__container {
-		max-width: $screen-sm-min - 200px;
+		&__heroText {
+			background-color: transparent;
+			justify-content: center;
+			margin: -98px auto 0;
+			max-width: $screen-sm-min - 50px;
+			padding: 31px 0;
+		}
+
+		&__background--blackgrey {
+			background-color: $blackgrey-transparent;
+		}
+
+		&__container {
+			max-width: $screen-sm-min - 200px;
+		}
 	}
 }
 
 @media (min-width: $screen-md-min) {
-	.home__heroText {
-		max-width: $screen-md-min - 50px;
-	}
+	.Home {
+		&__heroText {
+			max-width: $screen-md-min - 50px;
+		}
 	
-	.home .home__container {
-		max-width: $screen-md-min - 200px;
+		&__container {
+			max-width: $screen-md-min - 200px;
+		}
 	}
 }
 
 @media (min-width: $screen-lg-min) {
-	.home__heroText {
-		max-width: $screen-md-min;
-	}
-	
-	.home__container {
-		max-width: $screen-md-min - 200px;
+	.Home {
+		&__heroText {
+			max-width: $screen-md-min;
+		}
+
+		&__container {
+			max-width: $screen-md-min - 200px;
+		}
 	}
 }
 
 @media (min-width: $screen-xl-min) {
-	.home__heroImg {
+	.Home__heroImg {
 		height: 700px;
 	}
 }

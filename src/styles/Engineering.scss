@@ -1,75 +1,71 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.engineering {
+.Engineering {
 	flex: 1 0 auto;
 	padding: 25px 0 25px;
-}
-
-.engineering__container {
-	margin: $headerHeight--mobile auto 0;
-	max-width: $screen-xs-min - 50px;
-}
-
-.engineering__content {
-
-}
-
-.engineering__list {
-	padding: 0;
-}
-
-.engineering__listItem {
-	border-bottom: 1px dashed $mediumgrey;
-	display: flex;
-	flex-direction: column;
-	margin: 0 20px;
-	padding: 20px 0;
-}
-
-.engineering__listItem:last-child {
-	border-bottom: none;
-}
-
-.engineering__text {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	text-align: justify;
 	
-	h2 {
-		margin: 5px 0;
+	&__container {
+		margin: $headerHeight--mobile auto 0;
+		max-width: $screen-xs-min - 50px;
 	}
-}
 
-.engineering__image {
-	background-repeat: no-repeat;
-	background-size: cover;
-	flex-shrink: 0;
-	height: 150px;
-	margin: 10px auto;
-	width: 150px;
-}
+	&__list {
+		padding: 0;
+	}
 
-.engineering__image--design {
-	background-image: url(../../public/./DesignExample-150px.png);
-}
+	&__listItem {
+		border-bottom: 1px dashed $mediumgrey;
+		display: flex;
+		flex-direction: column;
+		margin: 0 20px;
+		padding: 20px 0;
+	}
 
-.engineering__image--FEA {
-	background-image: url(../../public/./FEAExample-150px.png);
-}
+	&__listItem:last-child {
+		border-bottom: none;
+	}
 
-.engineering__image--CFD {
-	background-image: url(../../public/./CFDExample-150px.png);
-}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 auto;
+		text-align: justify;
 
-.engineering__image--shock {
-	background-image: url(../../public/./ShockAnalysisExample-150px.png);
-}
+		h2 {
+			margin: 5px 0;
+		}
+	}
 
-.engineering__image--electronic {
-	background-image: url(../../public/./ElectronicsEnclosureExample-150px.png);
+	&__image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		flex-shrink: 0;
+		height: 150px;
+		margin: 10px auto;
+		width: 150px;
+	}
+
+	&__image--design {
+		background-image: url(../../public/./DesignExample-150px.png);
+	}
+
+	&__image--FEA {
+		background-image: url(../../public/./FEAExample-150px.png);
+	}
+
+	&__image--CFD {
+		background-image: url(../../public/./CFDExample-150px.png);
+	}
+
+	&__image--shock {
+		background-image: url(../../public/./ShockAnalysisExample-150px.png);
+	}
+
+	&__image--electronic {
+		background-image: url(../../public/./ElectronicsEnclosureExample-150px.png);
+	}
 }
 
 
@@ -77,55 +73,57 @@
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.engineering__container {
-		margin: 0 auto;
-		max-width: $screen-sm-min - 50px;
-	}
-	
-	.engineering__listItem {
-		flex-direction: row;
-		margin: 0;
-	}
-	
-	.engineering__image {
-		height: 250px;
-		width: 250px;
-	}
-	
-	.engineering__text {
-		margin: 0 50px;
-	}
-	
-	.engineering__image--design {
-		background-image: url(../../public/./DesignExample-250px.png);
-	}
+	.Engineering {
+		
+		&__container {
+			margin: 0 auto;
+			max-width: $screen-sm-min - 50px;
+		}
 
-	.engineering__image--FEA {
-		background-image: url(../../public/./FEAExample-250px.png);
-	}
+		&__listItem {
+			flex-direction: row;
+			margin: 0;
+		}
 
-	.engineering__image--CFD {
-		background-image: url(../../public/./CFDExample-250px.png);
-	}
+		&__image {
+			height: 250px;
+			width: 250px;
+		}
 
-	.engineering__image--shock {
-		background-image: url(../../public/./ShockAnalysisExample-250px.png);
-	}
+		&__text {
+			margin: 0 50px;
+		}
 
-	.engineering__image--electronic {
-		background-image: url(../../public/./ElectronicsEnclosureExample-250px.png);
+		&__image--design {
+			background-image: url(../../public/./DesignExample-250px.png);
+		}
+
+		&__image--FEA {
+			background-image: url(../../public/./FEAExample-250px.png);
+		}
+
+		&__image--CFD {
+			background-image: url(../../public/./CFDExample-250px.png);
+		}
+
+		&__image--shock {
+			background-image: url(../../public/./ShockAnalysisExample-250px.png);
+		}
+
+		&__image--electronic {
+			background-image: url(../../public/./ElectronicsEnclosureExample-250px.png);
+		}
 	}
-	
 }
 
 @media (min-width: $screen-md-min) {
-	.engineering__container {
+	.Engineering__container {
 		max-width: $screen-md-min - 50px;
 	}
 }
 
 @media (min-width: $screen-lg-min) {
-	.engineering__container {
+	.Engineering__container {
 		max-width: $screen-md-min;
 	}
 }

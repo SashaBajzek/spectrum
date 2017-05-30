@@ -1,62 +1,82 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.contactUs {
+.ContactUs {
 	@include main-box-shadow;
 	flex: 1 0 auto;
 	margin-top: 0;
 	padding: 25px 10px 25px;
-}
 
-.contactUs__container {
-	margin: $headerHeight--mobile auto 0;
-	max-width: $screen-xs-min - 50px;
-}
+	&__container {
+		margin: $headerHeight--mobile auto 0;
+		max-width: $screen-xs-min - 50px;
+	}
 
-.contactUs__googleMap {
-	margin-bottom: 15px;
-}
+	&__googleMap {
+		margin-bottom: 15px;
+	}
 
-.contactUs__map {
-	background-image: url(../../public/./US_Map.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	display: block;
-	height: 600px;
-	margin: 50px auto;
-}
+	&__map {
+		background-image: url(../../public/./US_Map.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: block;
+		height: 600px;
+		margin: 50px auto;
+	}
+	
+	&__email {
+		color: $blackgrey;
+	}
+	
+	&__underline {
+		border-bottom: solid transparent 1px;
+		flex-shrink: 0;
+	}
 
+	&__email:hover,
+	&__email:focus {
+		padding-bottom: 6px;
+
+		.ContactUs__underline {
+			border-bottom: solid $blackgrey 1px;
+			transition: border-bottom .2s ease;
+		}
+	}
+}
 
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.contactUs {
+	.ContactUs {
 		padding: 25px 0 25px;
-	}
 	
-	.contactUs__container {
-		margin: 0 auto;
-		max-width: $screen-sm-min - 50px;
-	}
-	
-	.contactUs__googleMap {
-		float: right;
-		margin-top: -60px;
+		&__container {
+			margin: 0 auto;
+			max-width: $screen-sm-min - 50px;
+		}
+
+		&__googleMap {
+			float: right;
+			margin-top: -60px;
+		}
 	}
 }
 
 @media (min-width: $screen-md-min) {
-	.contactUs__container {
-		max-width: $screen-md-min - 50px;
-	}
-	
-	.contactUs__googleMap {
-		margin-right: 200px;
+	.ContactUs {
+		&__container {
+			max-width: $screen-md-min - 50px;
+		}
+
+		&__googleMap {
+			margin-right: 200px;
+		}
 	}
 }
 
 @media (min-width: $screen-lg-min) {
-	.contactUs__container {
+	.ContactUs__container {
 		max-width: $screen-md-min;
 	}
 }
