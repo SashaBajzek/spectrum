@@ -6,15 +6,10 @@ class Acoustics extends Component {
     return (
 			<main className="Acoustics">
 				<div className="Acoustics__container">
-					<h1>ACOUSTICS</h1>
+					<h1>ACOUSTICS UNDER CONSTRUCTION</h1>
 					<div className="Acoustics__sonar"></div>
 					<div className="Acoustics__rig"></div>
 					<div className="Acoustics__content">
-						<p className="Acoustics__summary">Text summarizing the overall capabilities</p>
-						<ul>
-							<li className="Acoustics__listItem">Research & Development</li>
-							<li className="Acoustics__listItem">Finite Element Analysis</li>
-						</ul>
 					</div>
 				</div>
 			</main>

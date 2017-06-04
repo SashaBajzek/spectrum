@@ -8,6 +8,7 @@
 
 	&__heroImg {
 		background-image: url(../../public/./VirginiaApproach-home-sm.jpg);
+		background-position: 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 300px;
@@ -42,49 +43,69 @@
 		max-width: $screen-sm-min - 200px;
 	}
 
-	p {
+	&__content {
 		font-size: $large-font-size;
 		margin: 0;
 		padding: 20px 25px 0;
 		text-align: justify;
 	}
 
-	p:first-child {
+	&__content:first-child {
 		padding-top: 25px;
 	}
 
-	p:last-child {
+	&__content:last-child {
 		padding-bottom: 25px;
-	}
-
-	&__logos {
-		display: flex;
-	}
-
-	&__logo--SBA, &__logo--Seaport {
-		height: 60px;
-		margin: 25px auto;
 	}
 	
 	&__links {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 	}
 	
 	&__link {
-		border: 1px solid black;
 		color: $blackgrey;
 		display: block;
 		font-family: 'Muli', sans-serif;
 		font-size: $large-font-size;
+		height: 66px;
 		margin: 20px auto;
-		padding: 10px;
+		overflow: hidden;
+		position: relative;
+		width: 350px;
 	}
 	
-	&__link:hover,
-	&__link:focus {
-		background-color: $gold;
+	&__link-text {
+		background-color: $gold-transparent;
+		height: 66px;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		transition: transform 1s ease;
 	}
+	
+	&__link-heading {
+		margin: 20px auto;
+	}
+	
+	&__link-description {
+		padding: 5px;
+	}
+	
+	&__logos {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	&__logo {
+		margin: 15px auto;
+		text-align: center;
+	}
+
+	&__logo--SBA, &__logo--Seaport {
+		height: 45px;
+	}
+	
 }
 
 
@@ -94,20 +115,23 @@
 	.Home {
 		margin-top: 0;
 		
-		p {
+		&__content {
 			padding: 25px 45px 0;
 		}
 
-		p:first-child {
+		&__content:first-child {
 			padding-top: 45px;
 		}
 
-		p:last-child {
+		&__content:last-child {
 			padding-bottom: 45px;
 		}
 	
 		&__heroImg {
 			background-image: url(../../public/./VirginiaApproach-home-lg.jpg);
+			background-position: 0% 0%;
+			background-repeat: no-repeat;
+			background-size: cover;
 			height: 500px;
 		}
 
@@ -126,6 +150,49 @@
 		&__container {
 			max-width: $screen-sm-min - 200px;
 		}
+		
+		&__links {
+			flex-direction: row;
+		}
+		
+		&__link {
+			height: 200px;
+			margin: 50px auto;
+			width: 250px;
+		}
+		
+		&__link--who {
+			background: $main__background--grey url(../../public/./whoWeAreLinkImage.png) 50% no-repeat;
+			background-size: cover;
+		}
+
+		&__link--what {
+			background: $main__background--grey url(../../public/./whatWeDoLinkImage.png) 50% no-repeat;
+			background-size: cover;
+		}
+		
+		&__link-text {
+			height: 200px;
+			top: 134px;
+			transition: transform 1s ease;
+		}
+
+		&__link:hover .Home__link-text,
+		&__link:focus .Home__link-text {
+			transform: translateY(-134px);
+		}
+		
+		&__logos {
+			flex-direction: row;
+		}
+		
+		&__logo {
+			margin: 25px auto;
+		}
+
+		&__logo--SBA, &__logo--Seaport {
+			height: 60px;
+		}
 	}
 }
 
@@ -137,6 +204,27 @@
 	
 		&__container {
 			max-width: $screen-md-min - 200px;
+		}
+		
+		&__link {
+			height: 300px;
+			margin: 50px auto;
+			width: 350px;
+		}
+		
+		&__link-text {
+			height: 300px;
+			top: 234px;
+			transition: transform 1s ease;
+		}
+
+		&__link:hover .Home__link-text,
+		&__link:focus .Home__link-text {
+			transform: translateY(-234px);
+		}
+		
+		&__link-description {
+			padding: 15px;
 		}
 	}
 }

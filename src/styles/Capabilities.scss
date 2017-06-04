@@ -140,7 +140,6 @@
 		max-width: $screen-md-min - 50px;
 	}
 	
-	
 	.Capabilities-menu {
 		
 		&__list {
@@ -151,7 +150,7 @@
 			height: 200px;
 			margin: 0 2px 25px;
 			transform: skew(-20deg);
-			width: 19.5%;
+			width: 182px;
 			z-index: 1;
 		}
 
@@ -208,4 +207,9 @@
 	.Capabilities__container {
 		max-width: $screen-md-min;
 	}
+	
+	.Capabilities-menu__item {
+		width: 192px;
+	}
+
 }

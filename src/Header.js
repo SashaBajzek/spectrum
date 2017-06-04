@@ -37,6 +37,12 @@ class Header extends Component {
 		});
 	}
 	
+	closeHamburger = () => {
+		this.setState({
+		menuOpen: false
+		});
+	}
+	
 	getHamburgerClass () {
 			if(this.state.menuOpen) {
 				return "menuOpen";
@@ -49,7 +55,7 @@ class Header extends Component {
     return (
 			<header className={`Header ${this.getHamburgerClass()}`}>
 				<div className="Header__container--dark">
-					<h1 className="Header__logo"><Link to="/" className="Header__heading" onClick={this.toggleHamburger} >STG, INC.</Link></h1>
+					<h1 className="Header__logo"><Link to="/" className="Header__heading" onClick={this.closeHamburger} >STG, INC.</Link></h1>
 					<button onClick={this.toggleHamburger} className={`Header__hamburger Header__hamburger--${this.getHamburgerClass()}`}></button>
 					<nav className={`Header__nav Header__nav--${this.getHamburgerClass()}`}>
 					 <ul className="Header-nav-main">

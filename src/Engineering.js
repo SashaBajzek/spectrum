@@ -6,7 +6,7 @@ class Engineering extends Component {
     return (
 			<main className="Engineering">
 				<div className="Engineering__container">
-					<h1>ENGINEERING AND DESIGN</h1>
+					<h1 className="Engineering__heading">ENGINEERING AND DESIGN</h1>
 					<div className="Engineering__content">
 						<ul className="Engineering__list">
 							<li className="Engineering__listItem">

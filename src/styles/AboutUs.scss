@@ -85,6 +85,62 @@
 		text-align: justify;
 	}
 	
+	&__list {
+		padding: 0;
+	}
+	
+	&__item {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	&__text {
+		margin: 0 5px 25px 5px;
+	}
+	
+	&__heading {
+		margin-top: 5px;
+		text-align: center;
+	}
+	
+	&__logo {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		flex-shrink: 0;
+		height: 75px;
+		width: 75px;
+	}
+	
+	&__logo--mission {
+		background-image: url(../../public/./missionLogo.svg);
+	}
+	
+	&__logo--vision {
+		background-image: url(../../public/./visionLogo.svg);
+	}
+	
+	&__logo--people {
+		background-image: url(../../public/./peopleLogo.svg);
+	}
+	
+	&__logo--origins {
+		background-image: url(../../public/./originLogo.svg);
+	}
+	
+	&__logo--contracts {
+		background-image: url(../../public/./contractLogo.svg);
+	}
+	
+	&__contracts-list {
+		padding: 0;
+		
+		li {
+			text-align: center;
+		}
+	}
+	
 }
 
 
@@ -137,6 +193,29 @@
 
 		.quickFacts__item:first-child {
 			border-left: 1px dashed #555;
+		}
+		
+		&__item {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+		
+		&__text {
+			margin: 0 0 50px 25px;
+		}
+		
+		&__heading {
+			text-align: left;
+		}
+		
+		&__logo {
+			height: 100px;
+			margin: 0 25px;
+			width: 100px;
+		}
+		
+		&__contracts-list li {
+			text-align: left;
 		}
 	}
 }

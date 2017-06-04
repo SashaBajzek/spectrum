@@ -9,6 +9,11 @@
 		margin: $headerHeight--mobile auto 0;
 		max-width: $screen-xs-min - 50px;
 	}
+	
+	&__heading {
+		margin: 15px auto;
+		text-align: center;
+	}
 
 	&__list {
 		padding: 0;
@@ -34,7 +39,7 @@
 		text-align: justify;
 
 		h2 {
-			margin: 5px 0;
+			margin: 5px auto;
 		}
 	}
 
@@ -79,6 +84,11 @@
 			margin: 0 auto;
 			max-width: $screen-sm-min - 50px;
 		}
+		
+		&__heading {
+			margin: 15px auto;
+			text-align: left;
+		}
 
 		&__listItem {
 			flex-direction: row;
@@ -92,6 +102,10 @@
 
 		&__text {
 			margin: 0 50px;
+			
+			h2 {
+				margin: 5px 0;
+			}
 		}
 
 		&__image--design {
