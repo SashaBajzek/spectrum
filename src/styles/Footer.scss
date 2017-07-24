@@ -64,8 +64,7 @@
 		flex-shrink: 0;
 	}
 
-	&__link:hover,
-	&__link:focus {
+	&__link:hover {
 		padding-bottom: 6px;
 
 		.Footer__underline {
@@ -73,6 +72,18 @@
 			transition: border-bottom .2s ease;
 		}
 	}
+	
+	/*
+	&__link:focus {
+		outline-color: initial;
+    outline-style: dotted;
+    outline-width: thin;
+	}
+	
+	&__link:active {
+		outline: none;
+	}
+	*/
 
 	&__logo {
 		@include image-replace;

@@ -11,7 +11,7 @@ const items = [
 	},
 	{
 		id: 'fleet',
-		heading: 'Fleet Technical Support',
+		heading: 'Fleet Technical Services',
 		backgroundImg: 'fleet'
 	},
 	{

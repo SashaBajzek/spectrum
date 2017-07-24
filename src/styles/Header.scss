@@ -18,7 +18,7 @@
 		position: fixed;
 		right: 0;
 		top: 40px;
-		transition: transform 1.5s ease;
+		transition: transform 1.0s ease;
 		transform: translateX(100%);
 	}
 
@@ -26,7 +26,7 @@
 		flex-direction: column;
 		justify-content: space-around;
 		transform: translateX(0);
-		transition: transform 1.5s ease;
+		transition: transform 1.0s ease;
 	}
 
 	&__container--dark {
@@ -152,16 +152,29 @@
 		text-align: center;
 		text-transform: uppercase;
 	}
-
-
-
-	&__link:hover,
-	&__link:focus {
+	
+	&__link:hover {
 		.Header-nav-main__underline {
 			border-bottom: solid $gold 2px;
 			transition: border-bottom .2s ease;
 		}
 	}
+	
+/*
+	
+	&__link:focus {
+		outline-color: initial;
+    outline-style: dotted;
+    outline-width: thin;
+	}
+	
+	&__link:active {
+		outline: none;
+	}
+	
+	*/
+	
+
 	
 	&__underline {
 		border-bottom: solid transparent 2px;
@@ -207,14 +220,27 @@
 		text-align: center;
 		text-transform: uppercase;	
 	}
-
-	&__link:hover,
-	&__link:focus {
+	
+	&__link:hover {
 	 .Header-nav-tools__underline {
 			border-bottom: solid $mediumgrey 2px;
 			transition: border-bottom .2s ease;
 		}
 	}
+	
+	/*
+	
+	&__link:focus {
+		outline-color: initial;
+    outline-style: dotted;
+    outline-width: thin;
+	}
+	
+	&__link:active {
+		outline: none;
+	}
+	
+	*/
 
 	&__underline {
 		border-bottom: solid transparent 2px;

@@ -1,7 +1,7 @@
 @import './variables.scss';
 @import './mixins.scss';
 
-.Engineering {
+.CapabilitySection {
 	flex: 1 0 auto;
 	padding: 25px 0 25px;
 	
@@ -78,7 +78,7 @@
 /* Media Sizes */
 
 @media (min-width: $screen-sm-min) {
-	.Engineering {
+	.CapabilitySection {
 		
 		&__container {
 			margin: 0 auto;
@@ -131,13 +131,13 @@
 }
 
 @media (min-width: $screen-md-min) {
-	.Engineering__container {
+	.CapabilitySection__container {
 		max-width: $screen-md-min - 50px;
 	}
 }
 
 @media (min-width: $screen-lg-min) {
-	.Engineering__container {
+	.CapabilitySection {
 		max-width: $screen-md-min;
 	}
 }

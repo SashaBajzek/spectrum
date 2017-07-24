@@ -92,20 +92,6 @@
 		padding: 5px;
 	}
 	
-	&__logos {
-		display: flex;
-		flex-direction: column;
-	}
-	
-	&__logo {
-		margin: 15px auto;
-		text-align: center;
-	}
-
-	&__logo--SBA, &__logo--Seaport {
-		height: 45px;
-	}
-	
 }
 
 
@@ -182,17 +168,6 @@
 			transform: translateY(-134px);
 		}
 		
-		&__logos {
-			flex-direction: row;
-		}
-		
-		&__logo {
-			margin: 25px auto;
-		}
-
-		&__logo--SBA, &__logo--Seaport {
-			height: 60px;
-		}
 	}
 }
 

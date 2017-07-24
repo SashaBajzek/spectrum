@@ -10,17 +10,17 @@ const items = [
 	{
 		id: 'vision',
 		heading: 'OUR VISION',
-		description: 'To change the paradigm of defense contracting from “What can I do to increase my bottom line?” to “What can I do to best support our service members and allies?”.'
+		description: 'To provide the best support to our military service members and allies while maintaining fiduciary integrity to the US government and tax payers.'
 	},
 	{
 		id: 'people',
 		heading: 'OUR PEOPLE',
-		description: 'From fundamental research to engineering development, we are a team of experts in a diverse range of disciplines with a singular focus to deliver the very best work without compromise.'
+		description: 'From fundamental research to engineering development, we are a team of experts in a diverse range of disciplines with a singular focus to deliver the very best work without compromise. Spectrum Technology has a unique staff of recently retired military service members including senior sonar personnel that have served with a combined 48 years of distinction on all classes of Submarines in the U. S. Fleet.'
 	},
 	{
 		id: 'origins',
 		heading: 'OUR ORIGINS',
-		description: 'Spectrum Technology was founded in 1999 by its President, Dennis Leland, after he had completed 30 years of service for the U.S. Government on critical Navy programs. He saw an opportunity in his specialty of Acoustic Engineering Analysis and decided to make the leap into business. Starting as a one-man operation, Spectrum Technology Group, Inc. has since grown, along with its reputation for good service by great people.'
+		description: 'Spectrum Technology was founded in 1999 by its President, Dennis Leland, after he had completed 30 years of service for the U.S. Government on critical Navy programs. He saw an opportunity in his specialty of Acoustic Engineering Analysis and decided to transition to the role of small business owner. Spectrum Technology Group, Inc. has since grown, along with its reputation for good service by great people.'
 	}
 ];
 
@@ -41,8 +41,8 @@ class AboutUs extends Component {
 									<p>1999</p>
 								</li>
 								<li className="quickFacts__item">
-									<h4>CONTRACTS</h4>
-									<p>3</p>
+									<h4>STATES</h4>
+									<p>7</p>
 								</li>
 								<li className="quickFacts__item">
 									<h4>EMPLOYEES</h4>
@@ -65,9 +65,8 @@ class AboutUs extends Component {
 								<div className="AboutUs__text">
 									<h2 className="AboutUs__heading">CURRENT CONTRACTS AND TASK ORDERS</h2>
 									<ul className="AboutUs__contracts-list">
-										<li>N00178-14-D-7932 – J101 (Mod 08)</li>
-										<li>N00178-14-D-7932 – FD01 (Mod 04)</li>
-										<li>N00178-14-D-5597 – FD01 (Mod 59)</li>
+										<li>N00178-14-D-7932–J101-Mod-08</li>
+										<li>N00178-14-D-7932–FD01-Mod-04</li>
 									</ul>
 								</div>
 							</li>

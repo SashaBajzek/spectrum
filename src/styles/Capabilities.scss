@@ -71,31 +71,6 @@
 		z-index: 1;
 	}
 
-	&__background--engineering {
-		background: $main__background--grey url(../../public/./engineeringAndDesign_placeholder.png) 50% no-repeat;
-		background-size: cover;
-	}
-
-	&__background--fleet {
-		background: $main__background--grey url(../../public/./fleetTechnicalSupport_placeholder.jpg) 50% no-repeat;
-		background-size: cover;
-	}
-
-	&__background--acoustics {
-		background: $main__background--grey url(../../public/./acoustics_placeholder.jpg) 50% no-repeat;
-		background-size: cover;
-	}
-
-	&__background--materials {
-		background: $main__background--grey url(../../public/./materialsResearch_placeholder.jpg) 50% no-repeat;
-		background-size: cover;
-	}
-
-	&__background--energy {
-		background: $main__background--grey url(../../public/./energyResearch_placeholder.jpg) 50% no-repeat;
-		background-size: cover;
-	}
-
 	&__heading-container {
 		background-color: $blue-transparent;
 		margin: 0;
@@ -132,6 +107,34 @@
 		&-menu__list {
 			justify-content: space-between;
 		}
+	}
+	
+	.Capabilities-menu {
+
+		&__background--engineering {
+			background: $main__background--grey url(../../public/./engineeringAndDesign_placeholder.png) 50% no-repeat;
+			background-size: cover;
+		}
+
+		&__background--fleet {
+			background: $main__background--grey url(../../public/./fleetsupportservices.jpg) 50% no-repeat;
+			background-size: cover;
+		}
+
+		&__background--acoustics {
+			background: $main__background--grey url(../../public/./acoustics_placeholder.jpg) 50% no-repeat;
+			background-size: cover;
+		}
+
+		&__background--materials {
+			background: $main__background--grey url(../../public/./materialsResearch_placeholder.jpg) 50% no-repeat;
+			background-size: cover;
+		}
+
+		&__background--energy {
+			background: $main__background--grey url(../../public/./energyResearch_placeholder.jpg) 50% no-repeat;
+			background-size: cover;
+		}						
 	}
 }
 

@@ -32,14 +32,6 @@ class Home extends Component {
 								</div>
 							</Link>
 						</div>
-						<div className="Home__logos">
-							<a className="Home__logo" href="https://www.sba.gov">
-								<img className="Home__logo--SBA" src={"../SBA_8aCertified.svg"} alt="SBA_8a Certification"/>
-							</a>
-							<a className="Home__logo" href="http://www.seaport.navy.mil/">
-								<img className="Home__logo--Seaport" src={"../seaport-e.svg"} alt="Seaport Registration"/>
-							</a>
-						</div>
 					</div>
 				</div>
 			</main>

@@ -69,7 +69,6 @@ class Header extends Component {
 							<h2 className="Header-nav-tools__heading">EMPLOYEE TOOLS</h2>
 							 <ul className="Header-nav-tools__list">
 								<li><a href="https://mail.spectrumtechnology.us/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.spectrumtechnology.us%2fowa%2f" className="Header-nav-tools__link"><span className="Header-nav-tools__underline">E-MAIL</span></a></li>
-								<li><a href="http://www.seaport.navy.mil/" className="Header-nav-tools__link"><span className="Header-nav-tools__underline">SEAPORT</span></a></li>
 								<li><a href="https://team.spectrumtechnology.us" className="Header-nav-tools__link"><span className="Header-nav-tools__underline">SHAREPOINT</span></a></li>
 							 </ul>
 						</div>
