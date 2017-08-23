@@ -5,6 +5,16 @@ import './styles/Capabilities.scss';
 
 const items = [
 	{
+		id: 'acoustics',
+		heading: 'Acoustics',
+		backgroundImg: 'acoustics'
+	},
+	{
+		id: 'energy',
+		heading: 'Energy Research',
+		backgroundImg: 'energy'
+	},
+	{
 		id: 'engineering',
 		heading: 'Engineering and Design',
 		backgroundImg: 'engineering'
@@ -15,20 +25,11 @@ const items = [
 		backgroundImg: 'fleet'
 	},
 	{
-		id: 'acoustics',
-		heading: 'Acoustics',
-		backgroundImg: 'acoustics'
-	},
-	{
 		id: 'materials',
-		heading: 'Materials Research',
+		heading: 'Marine Materials',
 		backgroundImg: 'materials'
-	},
-	{
-		id: 'energy',
-		heading: 'Energy Research',
-		backgroundImg: 'energy'
 	}
+	
 ];
 
 class Capabilities extends Component {
