@@ -72,6 +72,33 @@
 	&__image--electronic {
 		background-image: url(../../public/./ElectronicsEnclosureExample-150px.png);
 	}
+	
+	&__image--Liion {
+		background-image: url(../../public/./LiionSafetyCropped-150px.png);
+	}
+
+	&__image--fuelCell {
+		background-image: url(../../public/./NavalFuelCellCropped-150px.png);
+	}
+
+	&__image--dryDock {
+		background-image: url(../../public/./SubInDrydockCropped-150px.png);
+	}
+
+	&__image--reclaim {
+		background-image: url(../../public/./SubmarineReclamationCropped-150px.png);
+	}
+
+	&__image--turbine {
+		background-image: url(../../public/./UnderwaterTurbineCropped-150px.png);
+	}
+
+	&__image--sphere {
+		background-image: url(../../public/./SphereArrayCropped-150px.png);
+	}
+	
+	
+	
 }
 
 
@@ -127,6 +154,30 @@
 
 		&__image--electronic {
 			background-image: url(../../public/./ElectronicsEnclosureExample-250px.png);
+		}
+		
+		&__image--Liion {
+			background-image: url(../../public/./LiionSafetyCropped-250px.png);
+		}
+
+		&__image--fuelCell {
+			background-image: url(../../public/./NavalFuelCellCropped-250px.png);
+		}
+
+		&__image--dryDock {
+			background-image: url(../../public/./SubInDrydockCropped-250px.png);
+		}
+
+		&__image--reclaim {
+			background-image: url(../../public/./SubmarineReclamationCropped-250px.png);
+		}
+
+		&__image--turbine {
+			background-image: url(../../public/./UnderwaterTurbineCropped-250px.png);
+		}
+
+		&__image--sphere {
+			background-image: url(../../public/./SphereArrayCropped-250px.png);
 		}
 	}
 }
