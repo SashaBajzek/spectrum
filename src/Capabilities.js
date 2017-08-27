@@ -37,7 +37,7 @@ class Capabilities extends Component {
     return (
 			<main className="Capabilities">
 				<div className="Capabilities__container">
-					<h1 className="Capabilities__heading">CAPABILITIES:</h1>
+					<h1 className="Capabilities__heading">CAPABILITIES</h1>
 					<ul className="Capabilities-menu__list">
 						{items.map((item, i) => (
 							<li className="Capabilities-menu__item" key={item.id}>

@@ -12,14 +12,21 @@
 		max-width: $screen-xs-min - 50px;
 	}
 
-	&__googleMap {
-		margin-bottom: 15px;
-	}
-
 	&__map {
 		display: block;
 		margin: 30px auto 0;
 		width: 100%;
+	}
+	
+	&__googleMap {
+		margin-bottom: 15px;
+	}
+	
+	&__googleMap iframe {
+		border: none;
+		flex-shrink: 0;
+		height: 200px;
+		width: 200px;
 	}
 	
 	&__legend {
@@ -83,6 +90,10 @@
 			margin: 0 auto;
 			max-width: $screen-sm-min - 50px;
 		}
+		
+		&__container--indent {
+			padding-left: 50px;
+		}
 
 		&__googleMap {
 			float: right;
@@ -92,6 +103,11 @@
 		&__map {
 			height: 600px;
 			margin: 50px auto;
+		}
+		
+		&__googleMap iframe {
+			height: 300px;
+			width: 300px;
 		}
 		
 		&__legend {
