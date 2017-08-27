@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SimpleMap from './GoogleMap';
+import ContactMap from './ContactMap';
 import './styles/ContactUs.scss';
 
 class ContactUs extends Component {
@@ -25,8 +26,22 @@ class ContactUs extends Component {
 
 					<h2>E-Mail</h2>
 					<a  href="mailto:info@spectrumtechnology.us" className="ContactUs__email"><span className="ContactUs__underline">info@spectrumtechnology.us</span></a>
+						
+					<h2>Office Locations:</h2>
 					
-					<div className="ContactUs__map"></div>
+					<ContactMap />
+
+					<h3>Map Key</h3>
+					<ul className="ContactUs__legend">
+						<li className="ContactUs__legend-item">
+							<div className="ContactUs__star"></div>
+							<p>Spectrum Headquarters</p>
+						</li>
+						<li className="ContactUs__legend-item">
+							<div className="ContactUs__rectangle"></div>
+							<p>Spectrum Offices</p>
+						</li>
+					</ul>
 				</div>
 			</main>
     );
