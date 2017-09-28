@@ -139,6 +139,15 @@
 		li {
 			text-align: center;
 		}
+		
+		a {
+			color: $blackgrey;
+		}
+		
+		a:hover,
+		a:focus {
+			color: $textgrey;
+		}
 	}
 	
 }

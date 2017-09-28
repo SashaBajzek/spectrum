@@ -188,6 +188,10 @@
 	.CapabilitySection__container {
 		max-width: $screen-md-min - 50px;
 	}
+	
+	.CapabilitySection__text {
+		width: 642px;
+	}
 }
 
 @media (min-width: $screen-lg-min) {
