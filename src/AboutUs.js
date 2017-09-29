@@ -65,8 +65,8 @@ class AboutUs extends Component {
 								<div className="AboutUs__text">
 									<h2 className="AboutUs__heading">CURRENT CONTRACTS AND TASK ORDERS</h2>
 									<ul className="AboutUs__contracts-list">
-										<li><a href="./7932-J10108_Redacted.pdf">N00178-14-D-7932–J101-Mod-08</a></li>
-										<li><a href="./7932-FD0104_Redacted.pdf">N00178-14-D-7932–FD01-Mod-04</a></li>
+										<li><a href="./7932-J10108_Redacted.pdf" download>N00178-14-D-7932–J101-Mod-08</a></li>
+										<li><a href="./7932-FD0104_Redacted.pdf" download>N00178-14-D-7932–FD01-Mod-04</a></li>
 									</ul>
 								</div>
 							</li>

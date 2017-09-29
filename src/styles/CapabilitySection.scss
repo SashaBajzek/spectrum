@@ -53,6 +53,14 @@
 		margin: 10px auto;
 		width: 150px;
 	}
+	
+	&__image--trials {
+		background-image: url(../../public/./AcousticTrials-150px.png);
+	}
+
+	&__image--array {
+		background-image: url(../../public/./TowedArrayTestEquipment-150px.png);
+	}
 
 	&__image--design {
 		background-image: url(../../public/./DesignExample-150px.png);
@@ -98,7 +106,9 @@
 		background-image: url(../../public/./SphereArrayCropped-150px.png);
 	}
 	
-	
+	&__image--marine {
+		background-image: url(../../public/./MaterialSamples-150px.png);
+	}
 	
 }
 
@@ -136,6 +146,14 @@
 				margin: 5px 0;
 				text-align: left;
 			}
+		}
+		
+		&__image--trials {
+			background-image: url(../../public/./AcousticTrials-250px.png);
+		}
+
+		&__image--array {
+			background-image: url(../../public/./TowedArrayTestEquipment-250px.png);
 		}
 
 		&__image--design {
@@ -180,6 +198,10 @@
 
 		&__image--sphere {
 			background-image: url(../../public/./SphereArrayCropped-250px.png);
+		}
+		
+		&__image--marine {
+			background-image: url(../../public/./MaterialSamples-250px.png);
 		}
 	}
 }
