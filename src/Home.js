@@ -11,7 +11,7 @@ class Home extends Component {
 				<div className="Home__shadow">
 					<div className="Home__container">
 						<p className="Home__content">
-							Spectrum Technology Group offers a wide range of technical and administrative services primarily to the US Navy. Our team supports everything from fundamental research and engineering development to information technology and logistics management and more. We strive to provide the highest level of service across all of our core disciplines and to maintain a positive “Fleet First” mindset when tackling our customer’s challenging problems.
+							Spectrum Technology Group offers a wide range of technical and administrative services primarily to the U.S. Navy. Our team supports everything from fundamental research and engineering development to information technology and logistics management and more. We strive to provide the highest level of service across all of our core disciplines and to maintain a positive “Fleet First” mindset when tackling our customer’s challenging problems.
 						</p>
 						<p className="Home__content">
 							Everything we do, we do with the men and women who serve our country foremost in our minds. Their safety and mission efficacy is our highest priority.

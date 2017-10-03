@@ -10,12 +10,12 @@ const items = [
 	{
 		id: 'vision',
 		heading: 'OUR VISION',
-		description: 'To provide the best support to our military service members and allies while maintaining fiduciary integrity to the US government and tax payers.'
+		description: 'To provide the best support to our military service members and allies while maintaining fiduciary integrity to the U.S. government and tax payers.'
 	},
 	{
 		id: 'people',
 		heading: 'OUR PEOPLE',
-		description: 'From fundamental research to engineering development, we are a team of experts in a diverse range of disciplines with a singular focus to deliver the very best work without compromise. Spectrum Technology has a unique staff of recently retired military service members including senior sonar personnel that have served with a combined 48 years of distinction on all classes of Submarines in the U. S. Fleet.'
+		description: 'From fundamental research to engineering development, we are a team of experts in a diverse range of disciplines with a singular focus to deliver the very best work without compromise. Spectrum Technology has a unique staff of recently retired military service members including senior sonar personnel that have served with a combined 48 years of distinction on all classes of Submarines in the U.S. Fleet.'
 	},
 	{
 		id: 'origins',
