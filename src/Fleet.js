@@ -13,14 +13,14 @@ class Fleet extends Component {
 								<div className="CapabilitySection__image CapabilitySection__image--sphere"></div>
 								<div className="CapabilitySection__text">
 									<h2>Fleet Technical Support</h2>
-									<p>Spectrum Technology Group, Inc. personnel provides fleet liaison and maintenance coordination support to the Commander, Submarine Atlantic and Pacific fleets N4 staff, NAVSEA/PEOSUB programmatic offices, Naval Undersea Warfare Centers (NUWC) Newport and Keyport technical communities, Naval Supply Weapons Systems (NAVSUP WSS) and Defense Logistics Agency (DLA) supply communities and all the Major Shipyards with regards to Submarine Sphere Array (SA) and Large Aperture Bow (LAB) array maintenance planning, parts procurement, parts tracking, repair execution and post repair testing.</p>
+									<p>Spectrum Technology Group, Inc. personnel provides Fleet liaison and maintenance coordination for the Submarine Sphere Array (SA) and Large Aperture Bow (LAB) array. We provide this support for the Commander, Submarine Atlantic and Pacific Fleet’s N4 staff, NAVSEA/PEOSUB programmatic offices, Naval Undersea Warfare Centers (NUWC) Newport and Keyport technical communities, Naval Supply Weapons Systems (NAVSUP WSS), Defense Logistics Agency (DLA) supply communities, and all the Major Shipyards. Our services include array maintenance planning, parts procurement, parts tracking, repair execution and post repair testing.</p>
 								</div>
 							</li>
 							<li className="CapabilitySection__listItem">
 								<div className="CapabilitySection__image CapabilitySection__image--dryDock"></div>
 								<div className="CapabilitySection__text">
 									<h2>Fleet Technical Assist</h2>
-									<p>Our personnel also provide on-site support at the Naval Bases or Shipyards for Submarine Sphere or LAB Array and/or signal path troubleshooting, repair execution and post testing evolutions.</p>
+									<p>Our personnel can also provide on-site support at Naval Bases and Shipyards for Submarine Sphere and LAB Array including, but not limited to signal path troubleshooting, repair execution, and post testing evolutions.</p>
 								</div>
 							</li>
 							<li className="CapabilitySection__listItem">

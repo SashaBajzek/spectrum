@@ -13,7 +13,7 @@ class Energy extends Component {
 								<div className="CapabilitySection__image CapabilitySection__image--fuelCell"></div>
 								<div className="CapabilitySection__text">
 									<h2>Energy Storage Technology</h2>
-									<p>Spectrum Technology Group, Inc. has a team of dedicated individuals providing technical and research support for the Naval Surface Warfare Center Carderock Division (NSWCCD) Advanced Power and Energy Branch (APEB). With the latest trends in ship design and power utilization and distribution needs shipboard energy storage is become more critical than ever before. Our team works on developing novel means for energy storage using traditional electrochemical batteries, power cells, and lithium ion in independent and hybrid power generation schemes for surface ships, facilities, and even man portable versions for deployment alongside marine expeditionary units.</p>
+									<p>Spectrum Technology Group, Inc. has a team of dedicated individuals providing technical and research support for the Naval Surface Warfare Center Carderock Division (NSWCCD) Advanced Power and Energy Branch (APEB). The latest trends in ship design, specifically power utilization and distribution, are making the research and development of energy storage technologies more critical than ever before. Our team works on developing efficient means for energy storage using traditional electrochemical batteries, power cells, and lithium ion in both independent and hybrid power generation schemes. These efforts are focused on supporting surface ships, facilities, and portable versions for deployment alongside marine expeditionary units.</p>
 								</div>
 							</li>
 							<li className="CapabilitySection__listItem">
@@ -26,8 +26,8 @@ class Energy extends Component {
 							<li className="CapabilitySection__listItem">
 								<div className="CapabilitySection__image CapabilitySection__image--Liion"></div>
 								<div className="CapabilitySection__text">
-									<h2>Testing Automation and Failure Investigations</h2>
-									<p>We have talented people working on providing testing automation to accurately and repeatable assess the hazards and potentials associated with various energy storage technologies. They provide direct support for the U.S. Navy’s Lithium Battery Safety Program and similar programs to identify risks and perform failure investigations when experiments and active systems suffer breakdowns.</p>
+									<h2>Testing Automation and Failure Analysis</h2>
+									<p>We have talented people working on providing testing automation that is accurate, repeatable, and fully assess the hazards and potentials associated with various energy storage technologies. They provide direct support for the U.S. Navy’s Lithium Battery Safety Program and similar programs to identify risks and perform failure investigations when experiments and active systems suffer breakdowns.</p>
 								</div>
 							</li>
 						</ul>

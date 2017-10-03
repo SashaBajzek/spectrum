@@ -13,7 +13,7 @@ class Engineering extends Component {
 								<div className="CapabilitySection__image CapabilitySection__image--design"></div>
 								<div className="CapabilitySection__text">
 									<h2>Design</h2>
-									<p>Spectrum Technology Group, Inc. has a number of highly skilled employees who specialize in the engineering and design of defense related hardware and systems. Using Computer Aided Design and Engineering (CAD/CAE) software and techniques we ensure that our designs meet or exceed the requirements placed on them all while being operator friendly and easy to maintain.</p>
+									<p>Spectrum Technology Group, Inc. has a number of highly skilled employees who specialize in the engineering and design of defense related hardware and systems. Using Computer Aided Design and Computer Aided Engineering (CAD/CAE) software and techniques we ensure that our designs meet or exceed the requirements placed on them all while being operator friendly and easy to maintain.</p>
 								</div>
 							</li>
 							<li className="CapabilitySection__listItem">
@@ -27,7 +27,7 @@ class Engineering extends Component {
 								<div className="CapabilitySection__image CapabilitySection__image--CFD"></div>
 								<div className="CapabilitySection__text">
 									<h2>Computational Fluid Dynamics</h2>
-									<p>Our extensive use of modelling and simulation doesn’t just end where the structure meets the surrounding medium! We utilize Computational Fluid Dynamics (CFD) software to perform detailed analysis of fluid flow, air flow, and the thermal transport mechanisms in a variety of fluids and gases. The results of these studies can be integrated into the structural models or used directly to make changes in the overall design. The goal of all of this modelling and simulation is to reduce the amount of hardware that needs to be developed and tested during the design phases and streamline the path to production, installation, or alteration.</p>
+									<p>Our extensive use of modelling and simulation doesn’t just end where the structure meets the surrounding medium. We utilize Computational Fluid Dynamics (CFD) software to perform detailed analysis of fluid flow, air flow, and the thermal transport mechanisms in a variety of fluids and gases. The results of these studies can be integrated into the structural models or used directly to make changes in the overall design. The goal of all of this modelling and simulation is to reduce the amount of hardware that needs to be developed and tested during the design phases and streamline the path to production, installation, or alteration.</p>
 								</div>
 							</li>
 							<li className="CapabilitySection__listItem">
